@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SchemaCatalog xmlns="http://schemas.microsoft.com/xsd/catalog">
-	<Schema href="ButtonTransfer/meta/ButtonTransfer.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
 	<Schema href="DropDownBox/meta/DropDownBox.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
-	<Schema href="GroupBox/meta/GroupBox.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
-	<Schema href="ListBox/meta/ListBox.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
 	<Schema href="NumericInput/meta/NumericInput.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
-	<Schema href="Screenshot/meta/Screenshot.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
-	<Schema href="ToggleSwitch/meta/ToggleSwitch.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
-	<Schema href="WeekPlanning/meta/WeekPlanning.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
-	<Schema href="WeekPlanningItem/meta/WeekPlanningItem.xsd" targetNamespace="http://www.br-automation.com/iat2015/contentDefinition/v2" />
 </SchemaCatalog>

@@ -1,0 +1,26 @@
+.ImageView {
+    overflow: hidden;
+    pointer-events: none;
+
+    &.ImageIndicator {
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        width: 30%;
+        /*arrow svg max size is 32x32 (A&P 742775)*/
+        max-width: 35px;
+
+        &.orientation-right {
+            order: 0;
+        }
+
+        &.orientation-left {
+            order: 1;
+        }
+
+        img,
+        svg {
+            height: 50%;
+        }
+    }
+}

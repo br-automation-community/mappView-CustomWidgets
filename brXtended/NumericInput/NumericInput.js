@@ -1,21 +1,15 @@
-define(['widgets/brease/NumericInput/NumericInput',
-    'brease/decorators/LanguageDependency',
-    'brease/decorators/MeasurementSystemDependency',
-    'widgets/brXtended/NumericInput/libs/config',
-    'brease/enum/Enum',
-    'brease/core/Utils'
-], function (SuperClass, languageDependency, measurementSystemDependency, Config, Enum, Utils) {
-
-    'use strict';
-
+"use strict";
+define([
+    "widgets"
+], function (
+    widgets
+) {
     /**
      * @class widgets.brXtended.NumericInput
      * #Description
-     * Input field for numeric values  
-     * To edit values, an window for numeric input (=NumPad) will be shown  
-     * 
-     * @breaseNote 
-    
+     * Input field for numeric values
+     * To edit values, an window for numeric input (=NumPad) will be shown
+     *
      * @extends widgets.brease.NumericInput
      *
      * @aside example numinout
@@ -31,14 +25,6 @@ define(['widgets/brease/NumericInput/NumericInput',
      */
 
     /**
-     * @htmltag examples
-     * Simple Code example
-     *
-     *     <div id="numInput01" data-brease-widget="widgets/brXtended/NumericInput"></div>
-     *
-     */
-
-    /**
      * @method getValue
      * @hide
      */
@@ -47,25 +33,23 @@ define(['widgets/brease/NumericInput/NumericInput',
     const err_unkown = 10000;
     const err_invalid_color = 10001;
 
-    var defaultSettings = Config;
+    var defaultSettings = {};
 
-    var WidgetClass = SuperClass.extend(function NumericInput() {
-        SuperClass.apply(this, arguments);
-    }, defaultSettings);
+    const WidgetClass = widgets.brease.NumericInput.extend(
+        function NumericInput() {
+            widgets.brease.NumericInput.apply(this, arguments);
+        }, defaultSettings);
 
     var p = WidgetClass.prototype;
 
     p.init = function () {
-        if (this.settings.omitClass !== true) {
-            this.addInitialClass('breaseNumericInput');
-        }
-        // breaseNumericInput css class should not be added
-        this.settings.omitClass = true;
+        this.addInitialClass("brXtendedNumericInput");
 
-        SuperClass.prototype.init.call(this);
+        // breaseNumericInput css class should not be added
+        widgets.brease.NumericInput.prototype.init.call(this);
     };
 
-     /**
+    /**
      * @method setBackColorExt
      * @iatStudioExposed
      * Sets the back color of the widget.
@@ -76,10 +60,9 @@ define(['widgets/brease/NumericInput/NumericInput',
         var s = new Option().style;
         s.color = value;
 
-        if (s.color !== ''){
-            this.el.css('background-color', value);
-        }
-        else{
+        if (s.color !== "") {
+            this.el.css("background-color", value);
+        } else {
             widget._errorHandling(err_invalid_color);
         }
     };
@@ -89,20 +72,33 @@ define(['widgets/brease/NumericInput/NumericInput',
 
         var widget = this;
         /**
-        * @event OnError
-        * Fired when there is an error on the operation.
-        * @iatStudioExposed
-        * @param {Integer} result Number of error transmitted by the mapp component.
-        */
-        var ev = widget.createEvent('OnError', { result: code });
+         * @event OnError
+         * Fired when there is an error on the operation.
+         * @iatStudioExposed
+         * @param {Integer} response Number of error transmitted by the mapp component.
+         */
+        var ev = widget.createEvent("OnError", { response: code });
         if (ev !== undefined) {
             ev.dispatch();
         }
 
         // Send error to PLC logger
         if (!brease.config.editMode) {
-            var m = 'Error ' + code + ' in brXtended on page ' + widget.settings.parentContentId +  ' at widget ' + this.elem.id;
-            brease.loggerService.log(Enum.EventLoggerId.CLIENT_SCRIPT_FAIL, Enum.EventLoggerCustomer.BUR, Enum.EventLoggerVerboseLevel.OFF, Enum.EventLoggerSeverity.ERROR, [], m);
+            var m =
+                "Error " +
+                code +
+                " in brXtended on page " +
+                widget.settings.parentContentId +
+                " at widget " +
+                this.elem.id;
+            brease.loggerService.log(
+                Enum.EventLoggerId.CLIENT_SCRIPT_FAIL,
+                Enum.EventLoggerCustomer.BUR,
+                Enum.EventLoggerVerboseLevel.OFF,
+                Enum.EventLoggerSeverity.ERROR,
+                [],
+                m
+            );
         }
     };
 
@@ -116,10 +112,16 @@ define(['widgets/brease/NumericInput/NumericInput',
     };
 
     p._createUnitEl = function () {
-        return $('<span></span>')
-            .addClass('breaseNumericInputExt_unit');
+        return $("<span></span>").addClass("brXtendedNumericInput_unit");
+    };
+    p._onFocusIn = function () {
+        if (this.isDisabled === true) {
+            this.inputEl.blur();
+        } else {
+            this.focusInTime = Date.now();
+            this.el.addClass("active");
+        }
     };
 
-    return measurementSystemDependency.decorate(languageDependency.decorate(WidgetClass, false), true);
-
+    return WidgetClass;
 });

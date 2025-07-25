@@ -1,8 +1,5 @@
-define([
-    'brease/enum/Enum'
-], function (Enum) {
-
-    'use strict';
+'use strict';
+define(['brease'], function ({ enum: { Enum } }) {
 
     /**
      * @class widgets.brXtended.DropDownBox.config.Config
@@ -19,7 +16,7 @@ define([
      * If 2, the list box will always try to center the list box to the screen.
      */
 
-     return {
+    return {
         selectedIndex: 0,
         selectedValue: '',
         itemHeight: 40,
