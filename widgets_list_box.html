@@ -613,7 +613,7 @@
   <h1>ListBox</h1>
 
 <h2 id="description">Description</h2>
-<p>This widgets extends the standard list box. Adding 1 styling property <strong>itemMarginExt</strong> and 1 event <strong>ItemClickExt</strong></p>
+<p>This widget extends the standard list box, adding 1 styling property <strong>itemMarginExt</strong> and 1 event <strong>ItemClickExt</strong></p>
 <h2 id="usage">Usage</h2>
 <p>The following additional functions are available</p>
 <ul>
@@ -621,7 +621,7 @@
 </ul>
 <h4 id="properties">Properties</h4>
 <p><strong>itemMarginExt</strong></p>
-<p>This property is use to apply maring to all items in the list.</p>
+<p>This property is used to apply margin to all items in the list.</p>
 <ul>
 <li>With <strong>itemMarginExt</strong> set to <code>0px 0px 10px 0px</code> here is the result<blockquote>
 <p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4a1.svg" title=":bulb:" /> <strong>Tip:</strong> Set property <strong>listSeparatorcolor</strong> to <code>rgba(0,0,0,0)</code> to disable line separator in the list</p>
@@ -632,9 +632,9 @@
 <img alt="" src="images/listbox2.png" /></p>
 <h4 id="events">Events</h4>
 <p><strong>ItemClickExt</strong></p>
-<p>This event is fired whenever you click on a item, not the entire widget.</p>
+<p>This event is fired whenever you click on an item, not the entire widget.</p>
 <ul>
-<li>Argurments :<ul>
+<li>Arguments :<ul>
 <li><strong>clickedValue</strong> (String): Value of the item clicked</li>
 <li><strong>clickedText</strong> (String): Text of the item clicked</li>
 <li><strong>clickedIndex</strong> (Integer): Index of the item clicked</li>
@@ -643,8 +643,8 @@
 </ul>
 <p>Here is an application to this event:</p>
 <ul>
-<li>You want to create a list of selection from an array containing equipement but not the complete array.</li>
-<li>You created a dataProvider with <code>{"value": "IndexInTheArray", "text": "IdentifierForTheEquipement"}</code></li>
+<li>You want to create a list of selections from an array containing equipment but not the complete array.</li>
+<li>You created a dataProvider with <code>{"value": "IndexInTheArray", "text": "IdentifierForTheEquipment"}</code></li>
 <li>Here is initial state in the visualization</li>
 </ul>
 <p><img alt="" src="images/listbox3.png" /></p>
@@ -653,9 +653,9 @@
 </ul>
 <p><img alt="" src="images/listbox4.png" /></p>
 <blockquote>
-<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong>Warning:</strong> Text returned by the event in argument <strong>clickedText</strong>, if it's localized text, event return the raw text translation in the current language of the session</p>
-<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" title=":memo:" /> <strong>Note:</strong> This cannot be done using <strong>SelectedIndexChanged</strong> event, because index didn't change.</p>
-<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" title=":memo:" /> <strong>Note 2:</strong> This also prevent the usage of <strong>Click</strong> event on the complete widget and fired an event when user didn't click on a item.</p>
+<p><img alt="⚠" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/26a0.svg" title=":warning:" /> <strong>Warning:</strong> Text returned by the event in argument <strong>clickedText</strong>, if it's localized text, the event returns the raw text translation in the current language of the session</p>
+<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" title=":memo:" /> <strong>Note:</strong> This cannot be done using the <strong>SelectedIndexChanged</strong> event, because the index didn't change.</p>
+<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.1.0/assets/svg/1f4dd.svg" title=":memo:" /> <strong>Note 2:</strong> This also prevents the usage of the <strong>Click</strong> event on the complete widget and fires an event when the user didn't click on an item.</p>
 </blockquote>
 <h2 id="requirements">Requirements</h2>
 <p>Tested with</p>
