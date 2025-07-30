@@ -24,13 +24,16 @@ This property extends the existing property listPosition.
 
 ## Requirements
 
-* Automation Studio 4.11
+* Automation Studio 6.3
 * Minimum version required 5.16
 * Expected to work with later version
 
 May also work with lower version: **YES**
 
 ## Revision History
+
+##### Version 4
+- Update to mapp 6.3
 
 ##### Version 3
 - Sometimes list box is not aligned with bottom widget

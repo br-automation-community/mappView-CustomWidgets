@@ -24,13 +24,16 @@ Opens the numeric key pad. This action has no additional parameters.
 
 Tested with
 
-* Automation Studio 4.11
+* Automation Studio 6.3
 * Minimum tested version 5.15
 * Expected to work with later version
 
 May also work with lower version: **YES**
 
 ## Revision History
+
+##### Version 3
+- Update to mapp 6.3
 
 ##### Version 2
 - New error handling

@@ -6,7 +6,7 @@ This widget requires mapp File (see Automation Studio help GUID f5ac430b-e0ca-43
 
 ![](./images/transfer1.png)
 
-The file device USER can be used without any additional configuration. All other file devices require a file device configuration. The file device configuration can be found in the target system configuration.
+All file devices require a file device configuration. The file device configuration can be found in the target system configuration. If you want to allow access to "everyone" make sure that the anonymous user also has the role of "BR_Anonymous"
 
 #### Properties
 
@@ -50,7 +50,7 @@ This event is called when the file was downloaded successful.
 
 **OnError**
 
-This event is called when a transfer was not successful. Returns the error number (result). Most error numbers are generated from underlying components and can be found in the Automation Studio help. The widget can also generate the following custom error numbers.
+This event is called when a transfer was not successful. Returns the error number (response). Most error numbers are generated from underlying components and can be found in the Automation Studio help. The widget can also generate the following custom error numbers.
 
 | Error No  | Description  |
 |---|---|
@@ -62,13 +62,16 @@ This event is called when a transfer was not successful. Returns the error numbe
 
 Tested with
 
-* Automation Studio 4.12
+* Automation Studio 6.3
 * Minimum tested version 5.15
 * Expected to work with later version
 
 May also work with lower version: **YES**
 
 ## Revision History
+
+##### Version 3
+- Update to mapp 6.3
 
 ##### Version 2
 - Fixed upload same file twice does not work

@@ -1,3 +1,6 @@
+#### 30.07.2025
+- Update numeric, drop down box and transfer widgets to mapp 6.3
+
 #### 11.04.2025
 - Fixed an issue where repeated screenshots on T-Panels will drive CPU load up to 100%
 
