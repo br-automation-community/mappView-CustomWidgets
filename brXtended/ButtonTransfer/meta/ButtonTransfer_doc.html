@@ -1,0 +1,686 @@
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>widgets.brXtended.ButtonTransfer Documentation</title>
+	<link href="../../../../assets/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+<div class="panel-heading"><h3>widgets.brXtended.ButtonTransfer</h3></div>
+<div class="panel panel-default">
+ <div class="panel-heading"><h3>Widget Description</h3></div>
+<table class="table table-bordered">
+<tbody>
+<tr>
+<td><strong>short: </strong>Screenshot widget</td>
+</tr>
+<tr>
+<td><strong>de: </strong>Dieses Widget dient zur Dateiübetragung</td>
+</tr>
+<tr>
+<td><strong>en: </strong>This widget transfers a file</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="panel panel-default">
+ <div class="panel-heading"><h3>Properties</h3></div>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>bindable</th>
+<th>readOnly</th>
+<th>required</th>
+<th>defaultValue</th>
+<th>localizable</th>
+</tr>
+ </thead>
+<tbody>
+<tr>
+<td>breakWord</td>
+<td>Boolean</td>
+<td>Allows lines to be broken within words if an otherwise unbreakable string is too long to fit.
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>draggable</td>
+<td>Boolean</td>
+<td>Make widget draggable.
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>ellipsis</td>
+<td>Boolean</td>
+<td>If true, overflow of text is symbolized with an ellipsis. This option has no effect, if wordWrap = true.
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>Boolean</td>
+<td>Initial option to enable widget.
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>image</td>
+<td>ImagePath</td>
+<td>Path to an optional image.
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>imageAlign</td>
+<td><a target="_blank" href="../../../../../breaseDoku/out/template.html#!/api/brease.enum.ImageAlign">brease.enum.ImageAlign</a></td>
+<td>Position of image relative to text.
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>left</td>
+<td>false</td>
+</tr>
+<tr>
+<td>maxFileSize</td>
+<td>Integer</td>
+<td>Maximum size of the transfered file
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td>10000000</td>
+<td>false</td>
+</tr>
+<tr>
+<td>mouseDownImage</td>
+<td>ImagePath</td>
+<td>Path to an optional image for mouseDown.
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>mouseDownText</td>
+<td>String</td>
+<td>Text which is displayed in the widget when pressed
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td style="color:green;font-weight:bold;">true</td>
+</tr>
+<tr>
+<td>multiLine</td>
+<td>Boolean</td>
+<td>If true, more than one line is possible.
+Text will wrap when necessary (if property wordWrap is set to true) or at explicit line breaks (\n).
+If false, text will never wrap to the next line. The text continues on the same line.
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>permissionOperate</td>
+<td>RoleCollection</td>
+<td>restricts operability to users, which have given roles
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>permissionView</td>
+<td>RoleCollection</td>
+<td>restricts visibility to users, which have given roles
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>style</td>
+<td>StyleReference</td>
+<td>reference to a style for this widget type
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td>default</td>
+<td>false</td>
+</tr>
+<tr>
+<td>tabIndex</td>
+<td>Integer</td>
+<td>sets if a widget should have autofocus enabled (0), the order of the focus (>0),
+or if autofocus should be disabled (-1)
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>Text which is displayed in the widget
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td style="color:green;font-weight:bold;">true</td>
+</tr>
+<tr>
+<td>tooltip</td>
+<td>String</td>
+<td>reference to a tooltip for a widget
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td style="color:green;font-weight:bold;">true</td>
+</tr>
+<tr>
+<td>useSVGStyling</td>
+<td>Boolean</td>
+<td>Define if the image stylings (i.e imageColor) are applied - only valid when SVG Images are used.
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>visible</td>
+<td>Boolean</td>
+<td>change visibility
+</td>
+<td style="color:green;font-weight:bold;">true</td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>wordWrap</td>
+<td>Boolean</td>
+<td>If true, text will wrap when necessary.
+This property has no effect, if multiLine=false
+</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>imageHeight</td>
+<td>ImageSize</td>
+<td>height of the image</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>imageWidth</td>
+<td>ImageSize</td>
+<td>width of the image</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>maxHeight</td>
+<td>Size</td>
+<td>maximum outer height of widget</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>minHeight</td>
+<td>Size</td>
+<td>minimum outer height of widget</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>maxWidth</td>
+<td>Size</td>
+<td>maximum outer width of widget</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>minWidth</td>
+<td>Size</td>
+<td>minimum outer width of widget</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>zIndex</td>
+<td>UInteger</td>
+<td>The zIndex property specifies the z-order of a widget and its childs.<br/>
+        When widgets overlap, z-order determines which one covers the other. A widget with a larger zIndex generally covers a widget with a lower one.<br/>
+        The zIndex must be unique within a content.<br/></td>
+<td>false</td>
+<td>false</td>
+<td>true</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>left</td>
+<td>Integer</td>
+<td>absolute position measured from left boundary of parent container</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>top</td>
+<td>Integer</td>
+<td>absolute position measured from top boundary of parent container</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td></td>
+<td>false</td>
+</tr>
+<tr>
+<td>height</td>
+<td>AutoSize</td>
+<td>outer height of widget</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>30</td>
+<td>false</td>
+</tr>
+<tr>
+<td>width</td>
+<td>AutoSize</td>
+<td>outer width of widget</td>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+<td>100</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="panel panel-default">
+ <div class="panel-heading"><h3>Styleable Properties</h3></div>
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+<th>defaultValue</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>width</td>
+<td>AutoSize</td>
+<td><p>outer width of widget</p>
+</td>
+<td>100</td>
+</tr>
+<tr>
+<td>height</td>
+<td>AutoSize</td>
+<td><p>outer height of widget</p>
+</td>
+<td>30</td>
+</tr>
+<tr>
+<td>top</td>
+<td>Integer</td>
+<td><p>absolute position measured from top boundary of parent container</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>left</td>
+<td>Integer</td>
+<td><p>absolute position measured from left boundary of parent container</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>zIndex</td>
+<td>UInteger</td>
+<td><p>The zIndex property specifies the z-order of a widget and its childs.&lt;br/&gt;
+When widgets overlap, z-order determines which one covers the other. A widget with a larger zIndex generally covers a widget with a lower one.&lt;br/&gt;
+The zIndex must be unique within a content.&lt;br/&gt;</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>minWidth</td>
+<td>Size</td>
+<td><p>minimum outer width of widget</p>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>maxWidth</td>
+<td>Size</td>
+<td><p>maximum outer width of widget</p>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>minHeight</td>
+<td>Size</td>
+<td><p>minimum outer height of widget</p>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>maxHeight</td>
+<td>Size</td>
+<td><p>maximum outer height of widget</p>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>imageWidth</td>
+<td>ImageSize</td>
+<td><p>width of the image</p>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>imageHeight</td>
+<td>ImageSize</td>
+<td><p>height of the image</p>
+</td>
+<td>0</td>
+</tr>
+<tr>
+<td>imageColor</td>
+<td>Color</td>
+<td><p>Color of the image - only apply if a SVG image is used</p>
+</td>
+<td style="background-color:#000000;color:white;">#000000</td>
+</tr>
+<tr>
+<td>mouseDownImageColor</td>
+<td>Color</td>
+<td><p>Color of the image - only apply if a SVG image is used</p>
+</td>
+<td style="background-color:#000000;color:white;">#000000</td>
+</tr>
+<tr>
+<td>disabledImageColor</td>
+<td>Color</td>
+<td><p>Color of the image - only apply if a SVG image is used</p>
+</td>
+<td style="background-color:#000000;color:white;">#000000</td>
+</tr>
+<tr>
+<td>borderStyle</td>
+<td>BorderStyle</td>
+<td><p>Style of the Border of the widget</p>
+</td>
+<td>solid</td>
+</tr>
+<tr>
+<td>borderWidth</td>
+<td>PixelValCollection</td>
+<td><p>Sets the width of the border. For further information, please check its type</p>
+</td>
+<td>2px</td>
+</tr>
+<tr>
+<td>cornerRadius</td>
+<td>PixelValCollection</td>
+<td><p>Sets the radius of the widget rounded corners. For further information, please check its type</p>
+</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>backColor</td>
+<td>Color</td>
+<td><p>Sets the background color</p>
+</td>
+<td style="background-color:#DBDBDB;color:black;">#DBDBDB</td>
+</tr>
+<tr>
+<td>disabledBackColor</td>
+<td>Color</td>
+<td><p>Sets the background color when disabled</p>
+</td>
+<td style="background-color:#F1F1F1;color:black;">#F1F1F1</td>
+</tr>
+<tr>
+<td>backGroundGradient</td>
+<td>Gradient</td>
+<td><p>Background as a gradient</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>disabledBackGroundGradient</td>
+<td>Gradient</td>
+<td><p>Background as a gradient</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>mouseDownBackGroundGradient</td>
+<td>Gradient</td>
+<td><p>Background as a gradient when widget is clicked</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>backGround</td>
+<td>ImagePath</td>
+<td><p>Sets the path for an image as background</p>
+</td>
+<td></td>
+</tr>
+<tr>
+<td>borderColor</td>
+<td>ColorCollection</td>
+<td><p>Sets the border color</p>
+</td>
+<td>#5B7C70</td>
+</tr>
+<tr>
+<td>disabledBorderColor</td>
+<td>ColorCollection</td>
+<td><p>Sets the color of the border when disabled</p>
+</td>
+<td>#FFFFFF #C8C8C8 #C8C8C8 #FFFFFF</td>
+</tr>
+<tr>
+<td>textColor</td>
+<td>Color</td>
+<td><p>Sets the color of the text when enabled</p>
+</td>
+<td style="background-color:#000000;color:white;">#000000</td>
+</tr>
+<tr>
+<td>disabledTextColor</td>
+<td>Color</td>
+<td><p>Sets the color of the text when disabled</p>
+</td>
+<td style="background-color:#989898;color:black;">#989898</td>
+</tr>
+<tr>
+<td>mouseDownBorderColor</td>
+<td>ColorCollection</td>
+<td><p>border color when widget is clicked</p>
+</td>
+<td>#FD7B01</td>
+</tr>
+<tr>
+<td>mouseDownBorderWidth</td>
+<td>PixelValCollection</td>
+<td><p>border width when widget is clicked</p>
+</td>
+<td>2px</td>
+</tr>
+<tr>
+<td>mouseDownBackColor</td>
+<td>Color</td>
+<td><p>back color when widget is clicked</p>
+</td>
+<td style="background-color:#DBDBDB;color:black;">#DBDBDB</td>
+</tr>
+<tr>
+<td>mouseDownTextColor</td>
+<td>Color</td>
+<td><p>text color when widget is clicked</p>
+</td>
+<td style="background-color:#000000;color:white;">#000000</td>
+</tr>
+<tr>
+<td>textAlign</td>
+<td>brease.enum.TextAlign</td>
+<td><p>Alignment of the text</p>
+</td>
+<td>center</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>Opacity</td>
+<td><p>Opacity of the widget</p>
+</td>
+<td>1</td>
+</tr>
+<tr>
+<td>rotation</td>
+<td>Rotation</td>
+<td><p>Rotation of widget.</p>
+</td>
+<td>0deg</td>
+</tr>
+<tr>
+<td>fontSize</td>
+<td>PixelVal</td>
+<td><p>Fontsize of the text in pixel</p>
+</td>
+<td>12px</td>
+</tr>
+<tr>
+<td>fontName</td>
+<td>FontName</td>
+<td><p>Fontname of the text</p>
+</td>
+<td>Arial</td>
+</tr>
+<tr>
+<td>bold</td>
+<td>Boolean</td>
+<td><p>If <em>true</em> font style is bold</p>
+</td>
+<td>false</td>
+</tr>
+<tr>
+<td>italic</td>
+<td>Boolean</td>
+<td><p>If <em>true</em> font style is italic</p>
+</td>
+<td>false</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>Padding</td>
+<td><p>Padding of the Widget</p>
+</td>
+<td>0px 10px</td>
+</tr>
+<tr>
+<td>margin</td>
+<td>Margin</td>
+<td><p>Margin of the Widget</p>
+</td>
+<td>0px</td>
+</tr>
+<tr>
+<td>shadow</td>
+<td>Shadow</td>
+<td><p>Shadow of the Widget</p>
+</td>
+<td>none</td>
+</tr>
+<tr>
+<td>mouseDownShadow</td>
+<td>Shadow</td>
+<td><p>Shadow of the Widget when widget clicked</p>
+</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+ <script src="../../../../jquery.js"></script>
+ <script src="../../../../assets/js/bootstrap.min.js"></script>
+</body>
+</html>

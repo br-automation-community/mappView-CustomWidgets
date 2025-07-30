@@ -1,8 +1,10 @@
 "use strict";
 define([
-    "widgets"
+    "widgets",
+    "brease"
 ], function (
-    widgets
+    widgets,
+    { enum: { Enum }, config, services: {logger} }
 ) {
     /**
      * @class widgets.brXtended.NumericInput
@@ -72,33 +74,20 @@ define([
 
         var widget = this;
         /**
-         * @event OnError
-         * Fired when there is an error on the operation.
-         * @iatStudioExposed
-         * @param {Integer} response Number of error transmitted by the mapp component.
-         */
-        var ev = widget.createEvent("OnError", { response: code });
+        * @event OnError
+        * Fired when there is an error on the operation.
+        * @iatStudioExposed
+        * @param {Integer} response Number of error transmitted by the mapp component.
+        */
+        var ev = widget.createEvent('OnError', { response: code });
         if (ev !== undefined) {
             ev.dispatch();
         }
 
         // Send error to PLC logger
-        if (!brease.config.editMode) {
-            var m =
-                "Error " +
-                code +
-                " in brXtended on page " +
-                widget.settings.parentContentId +
-                " at widget " +
-                this.elem.id;
-            brease.loggerService.log(
-                Enum.EventLoggerId.CLIENT_SCRIPT_FAIL,
-                Enum.EventLoggerCustomer.BUR,
-                Enum.EventLoggerVerboseLevel.OFF,
-                Enum.EventLoggerSeverity.ERROR,
-                [],
-                m
-            );
+        if (!config.editMode) {
+            var m = 'Error ' + code + ' in brXtended on page ' + widget.settings.parentContentId +  ' at widget ' + this.elem.id;
+            logger.log(Enum.EventLoggerId.CLIENT_SCRIPT_FAIL, Enum.EventLoggerCustomer.BUR, Enum.EventLoggerVerboseLevel.OFF, Enum.EventLoggerSeverity.ERROR, [], m);
         }
     };
 

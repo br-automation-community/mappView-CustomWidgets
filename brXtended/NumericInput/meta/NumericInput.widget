@@ -8,6 +8,7 @@
 		<Dependencies>
 			<Files>
 				<File>widgets.js</File>
+				<File>brease.js</File>
 			</Files>
 			<Folders>
 			</Folders>

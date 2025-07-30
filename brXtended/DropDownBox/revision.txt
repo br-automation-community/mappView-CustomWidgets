@@ -1,0 +1,11 @@
+Version 4
+- Update widget to mappView 6.x
+
+Version 3
+- Fixed: Sometimes list box is not aligned with bottom widget
+
+Version 2
+- Switched from copy original DropDownBox widget to inherited version
+
+Version 1
+- First release
