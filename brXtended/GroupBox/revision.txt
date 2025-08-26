@@ -1,0 +1,5 @@
+Version 2
+- Update widget to mappView 6.x
+
+Version 1
+- First release
