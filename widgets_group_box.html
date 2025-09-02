@@ -540,6 +540,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#version-1" class="md-nav__link">
     <span class="md-ellipsis">
       Version 1
@@ -610,20 +619,38 @@
 </ul>
 <h2 id="usage">Usage</h2>
 <h4 id="properties">Properties</h4>
-<p><strong>verticalAnchorTop</strong></p>
+<p><strong>verticalAnchorTopExt</strong></p>
 <p>This property is use to anchor top or bottom the items in a group box that already got "childPositioning" at "relative" and "alignment" at "vertical".</p>
-<p>If "verticalAnchorTop" is "true" it's default value and there is no change at the standard group box.
+<p>If "verticalAnchorTopExt" is "true" it's default value and there is no change at the standard group box.
 If it's "false", list is inverted like this:</p>
 <p><img alt="" src="images/groupbox1.png" /></p>
+<p><strong>alignItemsExt</strong></p>
+<p>This property is used to align items horizontally within the group box. This property works only if "childPositioning" is set to "relative" and "alignment" is set to "horizontal". Possible values are:
+- 'left top'
+- 'left center'
+- 'left bottom'
+- 'center top'
+- 'center center'
+- 'center bottom'
+- 'right top'
+- 'right center'
+- 'right bottom'</p>
 <h2 id="limitations">Limitations</h2>
 <h2 id="requirements">Requirements</h2>
 <p>Tested with</p>
 <ul>
-<li>Automation Studio 4.12</li>
-<li>mappView 5.24</li>
+<li>Automation Studio 6.3</li>
+<li>mappView 6.3</li>
 </ul>
 <p>May also work with lower version: <strong>YES</strong></p>
 <h2 id="revision-history">Revision History</h2>
+<h5 id="version-2">Version 2</h5>
+<ul>
+<li>Update widget to mappView 6.x</li>
+<li>Rename property "verticalAnchorTop" to "verticalAnchorTopExt"</li>
+<li>Add "alignItemsExt" style property to align items horizontal</li>
+<li>Update documentation for new properties</li>
+</ul>
 <h5 id="version-1">Version 1</h5>
 <ul>
 <li>First release</li>
