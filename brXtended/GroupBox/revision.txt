@@ -1,5 +1,8 @@
 Version 2
 - Update widget to mappView 6.x
+- Rename property "verticalAnchorTop" to "verticalAnchorTopExt"
+- Add "alignItemsExt" style property to align items horizontal
+- Update documentation for new properties
 
 Version 1
 - First release

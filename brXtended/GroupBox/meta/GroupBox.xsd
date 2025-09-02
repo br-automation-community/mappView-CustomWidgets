@@ -45,7 +45,7 @@
 			
 			<xs:attribute name="useSVGStyling" use="optional" type="types:Boolean" default="true" />
 			
-			<xs:attribute name="verticalAnchorTop" use="optional" type="types:Boolean" default="true" />
+			<xs:attribute name="verticalAnchorTopExt" use="optional" type="types:Boolean" default="true" />
 			
 			<xs:attribute name="imageHeight" use="optional" type="types:ImageSize" default="0" />
 			
@@ -88,6 +88,8 @@
 			<xs:attribute name="padding" use="optional" type="types:Padding" default="0px" />
 			
 			<xs:attribute name="margin" use="optional" type="types:Margin" default="0px 0px 12px 0px" />
+			
+			<xs:attribute name="alignItemsExt" use="optional" type="types:brease.enum.BackgroundPosition" default="left top" />
 			
 		</xs:extension>
 	</xs:complexContent>

@@ -157,6 +157,13 @@
 			</Description>
     </StyleProperty>
 
+    <StyleProperty name="alignItemsExt" category="Extended" type="brease.enum.BackgroundPosition" default="left top">
+      <StyleElement selector="&amp;.horizontal > .container" attribute="@include flex-position('$value')"></StyleElement>
+      <Description>
+        You can choose to align your items when alignment="horizontal"
+      </Description>
+    </StyleProperty>
+
 
   </StyleProperties>
 

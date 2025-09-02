@@ -223,7 +223,7 @@ or if autofocus should be disabled (-1)				</Description>
 			<Property name="useSVGStyling" type="Boolean" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="true">
 				<Description>Define if the image stylings (i.e imageColor) are applied - only valid when SVG Images are used.</Description>
 			</Property>
-			<Property name="verticalAnchorTop" type="Boolean" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="true">
+			<Property name="verticalAnchorTopExt" type="Boolean" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Extended" defaultValue="true">
 				<Description>If alignement=&apos;vertical&apos; you can choose anchor of your items, Top=&apos;true&apos; Bottom=&apos;false&apos;</Description>
 			</Property>
 			<Property name="visible" type="Boolean" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="true">
@@ -343,6 +343,10 @@ or if autofocus should be disabled (-1)				</Description>
 			<StyleProperty name="margin" category="Layout" type="Margin" default="0px 0px 12px 0px" owner="widgets.brXtended.GroupBox">
 				<StyleElement attribute="margin"/>
 				<Description>Margin of the Widget</Description>
+			</StyleProperty>
+			<StyleProperty name="alignItemsExt" category="Extended" type="brease.enum.BackgroundPosition" default="left top" owner="widgets.brXtended.GroupBox">
+				<StyleElement selector="&amp;.horizontal &gt; .container" attribute="@include flex-position(&apos;$value&apos;)"/>
+				<Description>You can choose to align your items when alignment=&quot;horizontal&quot;</Description>
 			</StyleProperty>
 		</StyleProperties>
 		<PropertyGroups>

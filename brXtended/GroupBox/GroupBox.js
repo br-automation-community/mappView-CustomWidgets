@@ -105,9 +105,9 @@ define([
      */
 
     /**
-     * @cfg {Boolean} verticalAnchorTop=true
+     * @cfg {Boolean} verticalAnchorTopExt=true
      * @iatStudioExposed
-     * @iatCategory Appearance
+     * @iatCategory Extended
      * If alignement='vertical' you can choose anchor of your items, Top='true' Bottom='false'
      */
 
@@ -122,7 +122,7 @@ define([
             useSVGStyling: true,
             float: 'left',
             maxHeight: 0,
-            verticalAnchorTop: true
+            verticalAnchorTopExt: true
         },
 
         WidgetClass = ContainerWidget.extend(function GroupBox() {
@@ -448,22 +448,22 @@ define([
     };
 
     /**
-     * @method setVerticalAnchorTop
-     * Sets verticalAnchorTop
-     * @param {Boolean} verticalAnchorTop
+     * @method setVerticalAnchorTopExt
+     * Sets verticalAnchorTopExt
+     * @param {Boolean} verticalAnchorTopExt
      */
-    p.setVerticalAnchorTop = function (verticalAnchorTop) {
-        this.settings.verticalAnchorTop = verticalAnchorTop;
+    p.setVerticalAnchorTopExt = function (verticalAnchorTopExt) {
+        this.settings.verticalAnchorTopExt = verticalAnchorTopExt;
         _setFlexDirection(this)
     };
 
     /**
-     * @method getVerticalAnchorTop 
-     * Returns verticalAnchorTop.
+     * @method getVerticalAnchorTopExt 
+     * Returns verticalAnchorTopExt.
      * @return {Boolean}
      */
-    p.getVerticalAnchorTop = function () {
-        return this.settings.verticalAnchorTop;
+    p.getVerticalAnchorTopExt = function () {
+        return this.settings.verticalAnchorTopExt;
     };
 
     p.resize = function () {
@@ -664,7 +664,7 @@ define([
 
     function _setFlexDirection(widget){
         if (widget.scrollWrapper) {
-            widget.scrollWrapper.css("flex-direction", widget.settings.verticalAnchorTop === true ? 'column' : 'column-reverse');
+            widget.scrollWrapper.css("flex-direction", widget.settings.verticalAnchorTopExt === true ? 'column' : 'column-reverse');
         }
     }
 
@@ -835,7 +835,7 @@ define([
         } else if (widget.settings.alignment === 'vertical') {
             widget.el.addClass('vertical');
             scrollerSettings = { mouseWheel: true, tap: true, scrollY: true, scrollX: false };
-            if (!widget.settings.verticalAnchorTop) {
+            if (!widget.settings.verticalAnchorTopExt) {
                 var containerHeight = widget.container.outerHeight();
                 var childrenHeight = 0;
                 if(widget.scrollWrapper){
