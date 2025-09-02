@@ -18,6 +18,9 @@
   <Mapping parameter="widgets.brXtended.DropDownBox.Action.SetSelectedValue.value" type="ANY_STRING" oType="String" index="0"/>
   <Mapping parameter="widgets.brXtended.DropDownBox.Action.SetStyle.value" type="ANY_STRING" oType="StyleReference" index="0"/>
   <Mapping parameter="widgets.brXtended.DropDownBox.Action.SetVisible.value" type="BOOL" oType="Boolean" index="0"/>
+  <Mapping parameter="widgets.brXtended.GroupBox.Action.SetEnable.value" type="BOOL" oType="Boolean" index="0"/>
+  <Mapping parameter="widgets.brXtended.GroupBox.Action.SetStyle.value" type="ANY_STRING" oType="StyleReference" index="0"/>
+  <Mapping parameter="widgets.brXtended.GroupBox.Action.SetVisible.value" type="BOOL" oType="Boolean" index="0"/>
   <Mapping parameter="widgets.brXtended.NumericInput.Action.SetBackColorExt.value" type="ANY_STRING" oType="String" index="0"/>
   <Mapping parameter="widgets.brXtended.NumericInput.Action.SetEnable.value" type="BOOL" oType="Boolean" index="0"/>
   <Mapping parameter="widgets.brXtended.NumericInput.Action.SetStyle.value" type="ANY_STRING" oType="StyleReference" index="0"/>
