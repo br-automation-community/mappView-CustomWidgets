@@ -1,0 +1,246 @@
+@use "mixins.scss";
+@use "sass:list";
+@use "sass:string";
+@mixin prop_width {
+	@include mixins.elemAutoWidth(400);
+
+}
+@mixin prop_height {
+	@include mixins.elemAutoHeight(100);
+
+}
+@mixin prop_minWidth {
+	@include mixins.elemMinWidth(0);
+
+}
+@mixin prop_maxWidth {
+	@include mixins.elemMaxWidth(0);
+
+}
+@mixin prop_minHeight {
+	@include mixins.elemMinHeight(0);
+
+}
+@mixin prop_maxHeight {
+	@include mixins.elemMaxHeight(0);
+
+}
+@mixin prop_borderWidth {
+	border-width: 0px;
+
+}
+@mixin prop_cornerRadius {
+	@include mixins.border-radius(0px);
+
+}
+@mixin prop_backColor {
+	background-color: #2c2c2c;
+
+	& .planning-container {
+		background-color: #2c2c2c;
+	}
+
+}
+@mixin prop_backGroundGradient {
+	@include mixins.backGroundGradient('');
+
+}
+@mixin prop_borderColor {
+	border-color: #C8C8C8;
+
+	&:before {
+		border-color: #C8C8C8;
+	}
+
+	&:after {
+		border-color: #C8C8C8;
+	}
+
+}
+@mixin prop_borderStyle {
+	border-style: none;
+
+	&:before {
+		border-style: none;
+	}
+
+	&:after {
+		border-style: none;
+	}
+
+}
+@mixin prop_textColor {
+	.planning-table td {
+		color: #fff;
+	}
+
+	.planning-table th {
+		color: #fff;
+	}
+
+	.buttons > button:not(active) {
+		color: #fff;
+	}
+
+}
+@mixin prop_opacity {
+	opacity: 1;
+
+}
+@mixin prop_fontName {
+	.planning-table th {
+		font-family: Arial;
+	}
+
+}
+@mixin prop_fontSize {
+	.planning-table th {
+		font-size: 14px;
+	}
+
+}
+@mixin prop_bold {
+	@include mixins.font-weight-bold(false);
+
+}
+@mixin prop_italic {
+	@include mixins.font-style-italic(false);
+
+}
+@mixin prop_underline {
+	span {
+		@include mixins.text-decoration-underline(false);
+	}
+
+}
+@mixin prop_margin {
+	margin: 0px;
+
+}
+@mixin prop_hoverCellBackColor {
+	.planning-table td.hovered {
+		background-color: #777;
+	}
+
+	.planning-table th.hovered {
+		background-color: #777;
+	}
+
+}
+@mixin prop_headerHeight {
+	.planning-table thead th.Hour {
+		height: 30px;
+	}
+
+}
+@mixin prop_headerWidth {
+	.planning-table thead th.Hour {
+		width: 30px;
+	}
+
+}
+@mixin prop_headerLeftHeight {
+	.planning-table tbody th.Day {
+		height: 30px;
+	}
+
+}
+@mixin prop_headerLeftWidth {
+	.planning-table thead #select-all {
+		width: 70px;
+	}
+
+}
+@mixin prop_buttonBarHeight {
+	.buttons {
+		height: 30px;
+	}
+
+}
+@mixin prop_headerBackColor {
+	.planning-table th {
+		background-color: #333;
+	}
+
+}
+@mixin prop_cellsBackColor {
+	.planning-table td {
+		background-color: #555;
+	}
+
+}
+@mixin prop_marginDeleteButton {
+	.buttons>button {
+		margin: 0px;
+	}
+
+}
+@mixin prop_backColorDeleteButton {
+	.buttons > button:not(active) {
+		background-color: #444;
+	}
+
+}
+@mixin prop_checkedBackColorDeleteButton {
+	.buttons > button.active {
+		background-color: #444;
+	}
+
+}
+@mixin prop_checkedTextColorDeleteButton {
+	.buttons > button.active {
+		color: #fff;
+	}
+
+}
+@mixin prop_deleteButtonHeight {
+	.buttons > button {
+		height: 30px;
+	}
+
+}
+@mixin prop_deleteButtonWidth {
+	.buttons > button {
+		width: 95px;
+	}
+
+}
+
+@mixin base {
+  @include prop_width;
+  @include prop_height;
+  @include prop_minWidth;
+  @include prop_maxWidth;
+  @include prop_minHeight;
+  @include prop_maxHeight;
+  @include prop_borderWidth;
+  @include prop_cornerRadius;
+  @include prop_backColor;
+  @include prop_backGroundGradient;
+  @include prop_borderColor;
+  @include prop_borderStyle;
+  @include prop_textColor;
+  @include prop_opacity;
+  @include prop_fontName;
+  @include prop_fontSize;
+  @include prop_bold;
+  @include prop_italic;
+  @include prop_underline;
+  @include prop_margin;
+  @include prop_hoverCellBackColor;
+  @include prop_headerHeight;
+  @include prop_headerWidth;
+  @include prop_headerLeftHeight;
+  @include prop_headerLeftWidth;
+  @include prop_buttonBarHeight;
+  @include prop_headerBackColor;
+  @include prop_cellsBackColor;
+  @include prop_marginDeleteButton;
+  @include prop_backColorDeleteButton;
+  @include prop_checkedBackColorDeleteButton;
+  @include prop_checkedTextColorDeleteButton;
+  @include prop_deleteButtonHeight;
+  @include prop_deleteButtonWidth;
+
+}
+

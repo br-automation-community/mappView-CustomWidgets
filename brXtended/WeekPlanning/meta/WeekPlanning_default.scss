@@ -1,0 +1,4 @@
+@use "WeekPlanning_base.scss" as widgets_brXtended_WeekPlanning;
+.widgets_brXtended_WeekPlanning_style_default {
+  @include widgets_brXtended_WeekPlanning.base
+}

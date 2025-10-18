@@ -12,8 +12,7 @@
 				<File>widgets/brXtended/common/DragDropProperties/libs/DroppablePropertiesEvents.js</File>
 				<File>widgets/brXtended/GroupBox/libs/EditorHandles.js</File>
 			</Files>
-			<Folders>
-			</Folders>
+			<Folders></Folders>
 			<Widgets>
 				<Widget>widgets.brXtended.GroupBox</Widget>
 			</Widgets>
@@ -240,11 +239,11 @@ or if autofocus should be disabled (-1)				</Description>
 				<Description>outer height of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="top" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="1">
-				<StyleElement attribute="@include elemTop($value)"/>
+				<StyleElement attribute="@include mixins.elemTop($value)"/>
 				<Description>absolute position measured from top boundary of parent container</Description>
 			</StyleProperty>
 			<StyleProperty name="left" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="2">
-				<StyleElement attribute="@include elemLeft($value)"/>
+				<StyleElement attribute="@include mixins.elemLeft($value)"/>
 				<Description>absolute position measured from left boundary of parent container</Description>
 			</StyleProperty>
 			<StyleProperty name="zIndex" type="UInteger" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" required="true">
