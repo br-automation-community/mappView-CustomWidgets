@@ -1,0 +1,169 @@
+@use "mixins.scss";
+@use "sass:list";
+@use "sass:string";
+@mixin prop_width {
+	@include mixins.elemAutoWidth(80);
+
+}
+@mixin prop_height {
+	@include mixins.elemAutoHeight(30);
+
+}
+@mixin prop_minWidth {
+	@include mixins.elemMinWidth(0);
+
+}
+@mixin prop_maxWidth {
+	@include mixins.elemMaxWidth(0);
+
+}
+@mixin prop_minHeight {
+	@include mixins.elemMinHeight(0);
+
+}
+@mixin prop_maxHeight {
+	@include mixins.elemMaxHeight(0);
+
+}
+@mixin prop_borderWidth {
+	border-width: 0px;
+
+}
+@mixin prop_cornerRadius {
+	@include mixins.border-radius(0px);
+
+}
+@mixin prop_backColor {
+	&:not(.disabled):not(.checked) {
+		background-color: #2c2c2c;
+	}
+
+	&:not(.disabled):not(.checked) button {
+		background-color: #2c2c2c;
+	}
+
+}
+@mixin prop_backGroundGradient {
+	&:not(.disabled):not(.checked) {
+		@include mixins.backGroundGradient('');
+	}
+
+}
+@mixin prop_borderColor {
+	&:not(.disabled):not(.checked) {
+		border-color: #C8C8C8;
+	}
+
+}
+@mixin prop_borderStyle {
+	border-style: none;
+
+	&:before {
+		border-style: none;
+	}
+
+	&:after {
+		border-style: none;
+	}
+
+}
+@mixin prop_textColor {
+	&:not(.disabled):not(.checked) {
+		color: #fff;
+	}
+
+	&:not(.disabled):not(.checked) button {
+		color: #fff;
+	}
+
+}
+@mixin prop_opacity {
+	opacity: 1;
+
+}
+@mixin prop_fontName {
+	span {
+		font-family: Arial;
+	}
+
+}
+@mixin prop_fontSize {
+	font-size: 14px;
+
+}
+@mixin prop_bold {
+	@include mixins.font-weight-bold(false);
+
+}
+@mixin prop_italic {
+	@include mixins.font-style-italic(false);
+
+}
+@mixin prop_underline {
+	span {
+		@include mixins.text-decoration-underline(false);
+	}
+
+}
+@mixin prop_margin {
+	margin: 0px;
+
+}
+@mixin prop_checkedBackColor {
+	&.checked {
+		background-color: #DBDBDB;
+	}
+
+	&.checked button {
+		background-color: #DBDBDB;
+	}
+
+}
+@mixin prop_checkedTextColor {
+	&.checked {
+		color: #000000;
+	}
+
+	&.checked button {
+		color: #000000;
+	}
+
+}
+@mixin prop_checkedBorderColor {
+	&.checked {
+		border-color: #FD7B01;
+	}
+
+	&.checked button {
+		border-color: #FD7B01;
+	}
+
+}
+
+@mixin base {
+  @include prop_width;
+  @include prop_height;
+  @include prop_minWidth;
+  @include prop_maxWidth;
+  @include prop_minHeight;
+  @include prop_maxHeight;
+  @include prop_borderWidth;
+  @include prop_cornerRadius;
+  @include prop_backColor;
+  @include prop_backGroundGradient;
+  @include prop_borderColor;
+  @include prop_borderStyle;
+  @include prop_textColor;
+  @include prop_opacity;
+  @include prop_fontName;
+  @include prop_fontSize;
+  @include prop_bold;
+  @include prop_italic;
+  @include prop_underline;
+  @include prop_margin;
+  @include prop_checkedBackColor;
+  @include prop_checkedTextColor;
+  @include prop_checkedBorderColor;
+
+}
+

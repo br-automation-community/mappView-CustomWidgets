@@ -30,10 +30,10 @@ You can select of the cells using the empty cell on the top left corner of the t
 
 Tested with
 
-* Automation Studio 4.12
-* mappView 5.24
+* Automation Studio 6
+* mappView 6.4
 
-May also work with lower version: **YES**
+May also work with lower version: **NO**
 
 ## Revision History
 

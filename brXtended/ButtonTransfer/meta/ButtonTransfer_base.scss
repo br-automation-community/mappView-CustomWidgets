@@ -1,160 +1,341 @@
-@import "mixins.scss";
-@mixin widgets_brXtended_ButtonTransfer_base {
-	@include elemAutoWidth(100);
-	@include elemAutoHeight(30);
-	@include elemMinWidth(0);
-	@include elemMaxWidth(0);
-	@include elemMinHeight(0);
-	@include elemMaxHeight(0);
+@use "mixins.scss";
+@use "sass:list";
+@use "sass:string";
+@mixin prop_width {
+	@include mixins.elemAutoWidth(100);
+
+}
+@mixin prop_height {
+	@include mixins.elemAutoHeight(30);
+
+}
+@mixin prop_minWidth {
+	@include mixins.elemMinWidth(0);
+
+}
+@mixin prop_maxWidth {
+	@include mixins.elemMaxWidth(0);
+
+}
+@mixin prop_minHeight {
+	@include mixins.elemMinHeight(0);
+
+}
+@mixin prop_maxHeight {
+	@include mixins.elemMaxHeight(0);
+
+}
+@mixin prop_imageWidth {
 	img {
-		@include imageWidth(0);
+		@include mixins.imageWidth(0);
 	}
+
 	svg {
-		@include imageWidth(0);
+		@include mixins.imageWidth(0);
 	}
+
+}
+@mixin prop_imageHeight {
 	img {
-		@include imageHeight(0);
+		@include mixins.imageHeight(0);
 	}
+
 	svg {
-		@include imageHeight(0);
+		@include mixins.imageHeight(0);
 	}
+
+}
+@mixin prop_imageColor {
 	&:not(.active):not(.disabled):not(.checked) svg {
 		fill: #000000;
 	}
+
+}
+@mixin prop_mouseDownImageColor {
 	&.active svg {
 		fill: #000000;
 	}
+
+}
+@mixin prop_disabledImageColor {
 	&.disabled svg {
 		fill: #000000;
 	}
+
+}
+@mixin prop_borderStyle {
 	border-style: solid;
+
 	&.active {
 		border-style: solid;
 	}
+
 	&.checked {
 		border-style: solid;
 	}
+
 	&.disabled {
 		border-style: solid;
 	}
+
+}
+@mixin prop_borderWidth {
 	&:not(.active):not(.checked) {
 		border-width: 2px;
 	}
+
 	&.disabled {
 		border-width: 2px;
 	}
-	@include border-radius(0px);
+
+}
+@mixin prop_cornerRadius {
+	@include mixins.border-radius(0px);
+
+}
+@mixin prop_backColor {
 	&:not(.disabled):not(.active):not(.checked) {
 		background-color: #DBDBDB;
 	}
+
+}
+@mixin prop_disabledBackColor {
 	&.disabled {
 		background-color: #F1F1F1;
 	}
+
 	&.disabled.active {
 		background-color: #F1F1F1;
 	}
+
 	&.disabled.checked {
 		background-color: #F1F1F1;
 	}
+
+}
+@mixin prop_backGroundGradient {
 	&:not(.disabled):not(.active):not(.checked) {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_disabledBackGroundGradient {
 	&.disabled {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
 	&.disabled.active {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
 	&.disabled.checked {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_mouseDownBackGroundGradient {
 	&.active:not(.disabled) {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
 	&.checked:not(.disabled) {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
-	@include pureBackgroundImage('../');
+
+}
+@mixin prop_backGround {
+	@include mixins.pureBackgroundImage('../');
+
+}
+@mixin prop_borderColor {
 	&:not(.disabled):not(.active):not(.checked) {
 		border-color: #5B7C70;
 	}
+
+}
+@mixin prop_disabledBorderColor {
 	&.disabled {
 		border-color: #FFFFFF #C8C8C8 #C8C8C8 #FFFFFF;
 	}
+
 	&.disabled.active {
 		border-color: #FFFFFF #C8C8C8 #C8C8C8 #FFFFFF;
 	}
+
 	&.disabled.checked {
 		border-color: #FFFFFF #C8C8C8 #C8C8C8 #FFFFFF;
 	}
+
+}
+@mixin prop_textColor {
 	&:not(.disabled):not(.active):not(.checked) span {
 		color: #000000;
 	}
+
+}
+@mixin prop_disabledTextColor {
 	&.disabled span {
 		color: #989898;
 	}
+
 	&.disabled.active span {
 		color: #989898;
 	}
+
 	&.disabled:checked span {
 		color: #989898;
 	}
+
+}
+@mixin prop_mouseDownBorderColor {
 	&.active:not(.disabled):not(.editMode) {
 		border-color: #FD7B01;
 	}
+
 	&.checked:not(.disabled) {
 		border-color: #FD7B01;
 	}
+
+}
+@mixin prop_mouseDownBorderWidth {
 	&.active:not(.disabled):not(.editMode) {
 		border-width: 2px;
 	}
+
 	&.checked:not(.disabled) {
 		border-width: 2px;
 	}
+
+}
+@mixin prop_mouseDownBackColor {
 	&.active:not(.disabled):not(.editMode) {
 		background-color: #DBDBDB;
 	}
+
 	&.checked:not(.disabled) {
 		background-color: #DBDBDB;
 	}
+
+}
+@mixin prop_mouseDownTextColor {
 	&.active:not(.disabled):not(.editMode) span {
 		color: #000000;
 	}
+
 	&.active.checked:not(.disabled) span {
 		color: #000000;
 	}
-	@include text-alignment(center);
+
+}
+@mixin prop_textAlign {
+	@include mixins.text-alignment(center);
+
+}
+@mixin prop_opacity {
 	opacity: 1;
-	@include rotate(0deg);
+
+}
+@mixin prop_rotation {
+	@include mixins.rotate(0deg);
+
+}
+@mixin prop_fontSize {
 	span {
 		font-size: 12px;
 	}
+
+}
+@mixin prop_fontName {
 	span {
 		font-family: Arial;
 	}
+
+}
+@mixin prop_bold {
 	span {
-		@include font-weight-bold(false);
+		@include mixins.font-weight-bold(false);
 	}
+
+}
+@mixin prop_italic {
 	span {
-		@include font-style-italic(false);
+		@include mixins.font-style-italic(false);
 	}
+
+}
+@mixin prop_padding {
 	padding: 0px 10px;
+
+}
+@mixin prop_margin {
 	margin: 0px;
+
+}
+@mixin prop_shadow {
 	&:not(.active):not(.checked) {
-		@include box-shadow(none);
+		@include mixins.box-shadow(none);
 	}
+
 	&.disabled.active {
-		@include box-shadow(none);
+		@include mixins.box-shadow(none);
 	}
+
 	&.disabled.checked {
-		@include box-shadow(none);
+		@include mixins.box-shadow(none);
 	}
+
+}
+@mixin prop_mouseDownShadow {
 	&.active:not(.disabled):not(.editMode) {
-		@include box-shadow(none);
+		@include mixins.box-shadow(none);
 	}
+
 	&.checked:not(.disabled) {
-		@include box-shadow(none);
+		@include mixins.box-shadow(none);
 	}
+
+}
+
+@mixin base {
+  @include prop_width;
+  @include prop_height;
+  @include prop_minWidth;
+  @include prop_maxWidth;
+  @include prop_minHeight;
+  @include prop_maxHeight;
+  @include prop_imageWidth;
+  @include prop_imageHeight;
+  @include prop_imageColor;
+  @include prop_mouseDownImageColor;
+  @include prop_disabledImageColor;
+  @include prop_borderStyle;
+  @include prop_borderWidth;
+  @include prop_cornerRadius;
+  @include prop_backColor;
+  @include prop_disabledBackColor;
+  @include prop_backGroundGradient;
+  @include prop_disabledBackGroundGradient;
+  @include prop_mouseDownBackGroundGradient;
+  @include prop_backGround;
+  @include prop_borderColor;
+  @include prop_disabledBorderColor;
+  @include prop_textColor;
+  @include prop_disabledTextColor;
+  @include prop_mouseDownBorderColor;
+  @include prop_mouseDownBorderWidth;
+  @include prop_mouseDownBackColor;
+  @include prop_mouseDownTextColor;
+  @include prop_textAlign;
+  @include prop_opacity;
+  @include prop_rotation;
+  @include prop_fontSize;
+  @include prop_fontName;
+  @include prop_bold;
+  @include prop_italic;
+  @include prop_padding;
+  @include prop_margin;
+  @include prop_shadow;
+  @include prop_mouseDownShadow;
 
 }
 

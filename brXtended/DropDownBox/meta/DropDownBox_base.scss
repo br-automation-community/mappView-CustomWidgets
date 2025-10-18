@@ -1,163 +1,352 @@
-@import "mixins.scss";
-@mixin widgets_brXtended_DropDownBox_base {
+@use "mixins.scss";
+@use "sass:list";
+@use "sass:string";
+@mixin prop_width {
 	&.DropDownBoxView {
-		@include elemWidth(100);
+		@include mixins.elemWidth(100);
 	}
+
+}
+@mixin prop_height {
 	&.DropDownBoxView {
-		@include elemHeight(30);
+		@include mixins.elemHeight(30);
 	}
+
+}
+@mixin prop_minWidth {
 	&.DropDownBoxView {
-		@include elemMinWidth(0);
+		@include mixins.elemMinWidth(0);
 	}
+
+}
+@mixin prop_maxWidth {
 	&.DropDownBoxView {
-		@include elemMaxWidth(0);
+		@include mixins.elemMaxWidth(0);
 	}
+
+}
+@mixin prop_minHeight {
 	&.DropDownBoxView {
-		@include elemMinHeight(0);
+		@include mixins.elemMinHeight(0);
 	}
+
+}
+@mixin prop_maxHeight {
 	&.DropDownBoxView {
-		@include elemMaxHeight(0);
+		@include mixins.elemMaxHeight(0);
 	}
+
+}
+@mixin prop_cornerRadius {
 	&.DropDownBoxView {
-		@include border-radius(0px);
+		@include mixins.border-radius(0px);
 	}
+
 	& > .ItemView {
-		@include border-radius(0px);
+		@include mixins.border-radius(0px);
 	}
+
 	& > .ListView.Container {
-		@include border-radius(0px);
+		@include mixins.border-radius(0px);
 	}
+
+}
+@mixin prop_opacity {
 	opacity: 1;
+
 	opacity: 1;
+
+}
+@mixin prop_margin {
 	&.DropDownBoxView {
 		margin: 0px;
 	}
+
+}
+@mixin prop_shadow {
 	&.DropDownBoxView {
-		@include box-shadow(none);
+		@include mixins.box-shadow(none);
 	}
+
+}
+@mixin prop_backColor {
 	& > .ItemView:not(.itemSelected):not(.itemDisabled) {
 		background-color: #DBDBDB;
 	}
+
+}
+@mixin prop_mouseDownBackColor {
 	& > .ItemView.itemSelected:not(.itemDisabled) {
 		background-color: #DBDBDB;
 	}
+
+}
+@mixin prop_disabledBackColor {
 	& > .ItemView.itemDisabled {
 		background-color: #F1F1F1;
 	}
+
+}
+@mixin prop_backGroundGradient {
 	& > .ItemView:not(.itemSelected):not(.itemDisabled) {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_mouseDownBackGroundGradient {
 	& > .ItemView.itemSelected:not(.itemDisabled) {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_disabledBackGroundGradient {
 	& > .ItemView.itemDisabled {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_borderStyle {
 	& > .ItemView {
 		border-style: solid;
 	}
+
 	& > .ItemView.lastItem {
 		border-style: solid;
 	}
+
+}
+@mixin prop_borderWidth {
 	& > .ItemView:not(.itemSelected) {
 		border-width: 2px;
 	}
+
+}
+@mixin prop_mouseDownBorderWidth {
 	& > .ItemView.itemSelected {
 		border-width: 2px;
 	}
+
+}
+@mixin prop_borderColor {
 	& > .ItemView:not(.itemSelected):not(.itemDisabled) {
 		border-color: #5B7C70;
 	}
+
 	& > .ListView.Container {
 		border-color: #5B7C70;
 	}
+
+}
+@mixin prop_mouseDownBorderColor {
 	& > .ItemView.itemSelected:not(.itemDisabled) {
 		border-color: #FD7B01;
 	}
+
+}
+@mixin prop_disabledBorderColor {
 	& > .ItemView.itemDisabled {
 		border-color: #FFFFFF #C8C8C8 #C8C8C8 #FFFFFF;
 	}
+
+}
+@mixin prop_textColor {
 	& > .ItemView:not(.itemSelected):not(.itemDisabled) > .TextView:not(.textSelected) {
 		color: #000000;
 	}
+
+}
+@mixin prop_mouseDownTextColor {
 	& > .ItemView.itemSelected:not(.itemDisabled) > .TextView.textSelected {
 		color: #000000;
 	}
+
+}
+@mixin prop_disabledTextColor {
 	& > .ItemView.itemDisabled > .TextView {
 		color: #989898;
 	}
+
+}
+@mixin prop_padding {
 	& > .ItemView {
 		padding: 0 10px;
 	}
+
+}
+@mixin prop_showOpenIndicator {
 	& > .ItemView > .ImageView.ImageIndicator {
-		@include display(false, 'flex');
+		@include mixins.display(false, 'flex');
 	}
+
+}
+@mixin prop_openIndicatorColor {
 	& > .ItemView:not(.itemSelected):not(.itemDisabled) > .ImageView.ImageIndicator svg {
 		fill: #000000;
 	}
+
+}
+@mixin prop_mouseDownOpenIndicatorColor {
 	& > .ItemView.itemSelected:not(.itemDisabled) > .ImageView.ImageIndicator svg {
 		fill: #000000;
 	}
+
+}
+@mixin prop_disabledOpenIndicatorColor {
 	& > .ItemView.itemDisabled > .ImageView.ImageIndicator svg {
 		fill: #989898;
 	}
+
+}
+@mixin prop_listPadding {
 	& > .ListView.Container > .ListView.List > .ItemView {
 		padding: 0 15px;
 	}
+
+}
+@mixin prop_listBackColor {
 	& > .ListView.Container > .ListView.List > .ItemView:not(.itemSelected) {
 		background-color: #FFFFFF;
 	}
+
+}
+@mixin prop_listBackGroundGradient {
 	& > .ListView.Container > .ListView.List > .ItemView:not(.itemSelected) {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_activeBackColor {
 	& > .ListView.Container > .ListView.List > .ItemView.itemSelected {
 		background-color: #ff8800;
 	}
+
+}
+@mixin prop_activeBackGroundGradient {
 	& > .ListView.Container > .ListView.List > .ItemView.itemSelected {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_listSeparatorColor {
 	& > .ListView.Container > .ListView.List > .ItemView {
 		border-bottom-color: #000;
 	}
+
+}
+@mixin prop_listBorderWidth {
 	& > .ListView.Container {
 		border-width: 2px;
 	}
+
+}
+@mixin prop_listTextColor {
 	& > .ListView.Container > .ListView.List > .ItemView > .TextView:not(.textSelected) {
 		color: #000000;
 	}
+
+}
+@mixin prop_activeTextColor {
 	& > .ListView.Container > .ListView.List > .ItemView > .TextView.textSelected {
 		color: #ffffff;
 	}
+
+}
+@mixin prop_textAlign {
 	& .TextView {
-		@include text-alignment(center);
+		@include mixins.text-alignment(center);
 	}
+
 	& .TextView {
-		@include text-alignment(center);
+		@include mixins.text-alignment(center);
 	}
+
+}
+@mixin prop_fontSize {
 	& .TextView {
 		font-size: 12px;
 	}
+
 	& .TextView {
 		font-size: 12px;
 	}
+
+}
+@mixin prop_fontName {
 	& .TextView {
 		font-family: Arial;
 	}
+
 	& .TextView {
 		font-family: Arial;
 	}
+
+}
+@mixin prop_bold {
 	& .TextView {
-		@include font-weight-bold(true);
+		@include mixins.font-weight-bold(true);
 	}
+
 	& .TextView {
-		@include font-weight-bold(true);
+		@include mixins.font-weight-bold(true);
 	}
+
+}
+@mixin prop_italic {
 	& .TextView {
-		@include font-style-italic(false);
+		@include mixins.font-style-italic(false);
 	}
+
 	& .TextView {
-		@include font-style-italic(false);
+		@include mixins.font-style-italic(false);
 	}
+
+}
+
+@mixin base {
+  @include prop_width;
+  @include prop_height;
+  @include prop_minWidth;
+  @include prop_maxWidth;
+  @include prop_minHeight;
+  @include prop_maxHeight;
+  @include prop_cornerRadius;
+  @include prop_opacity;
+  @include prop_margin;
+  @include prop_shadow;
+  @include prop_backColor;
+  @include prop_mouseDownBackColor;
+  @include prop_disabledBackColor;
+  @include prop_backGroundGradient;
+  @include prop_mouseDownBackGroundGradient;
+  @include prop_disabledBackGroundGradient;
+  @include prop_borderStyle;
+  @include prop_borderWidth;
+  @include prop_mouseDownBorderWidth;
+  @include prop_borderColor;
+  @include prop_mouseDownBorderColor;
+  @include prop_disabledBorderColor;
+  @include prop_textColor;
+  @include prop_mouseDownTextColor;
+  @include prop_disabledTextColor;
+  @include prop_padding;
+  @include prop_showOpenIndicator;
+  @include prop_openIndicatorColor;
+  @include prop_mouseDownOpenIndicatorColor;
+  @include prop_disabledOpenIndicatorColor;
+  @include prop_listPadding;
+  @include prop_listBackColor;
+  @include prop_listBackGroundGradient;
+  @include prop_activeBackColor;
+  @include prop_activeBackGroundGradient;
+  @include prop_listSeparatorColor;
+  @include prop_listBorderWidth;
+  @include prop_listTextColor;
+  @include prop_activeTextColor;
+  @include prop_textAlign;
+  @include prop_fontSize;
+  @include prop_fontName;
+  @include prop_bold;
+  @include prop_italic;
 
 }
 
