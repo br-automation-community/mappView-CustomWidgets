@@ -1,78 +1,184 @@
-@import "mixins.scss";
-@mixin widgets_brXtended_GroupBox_base {
-	@include elemWidth(200);
-	@include elemHeight(150);
+@use "mixins.scss";
+@use "sass:list";
+@use "sass:string";
+@mixin prop_width {
+	@include mixins.elemWidth(200);
+
+}
+@mixin prop_height {
+	@include mixins.elemHeight(150);
+
+}
+@mixin prop_borderWidth {
 	border-width: 1px;
+
 	> .header {
 		border-width: 1px;
 	}
-	@include border-radius(0px);
+
+}
+@mixin prop_cornerRadius {
+	@include mixins.border-radius(0px);
+
+}
+@mixin prop_backColor {
 	background-color: transparent;
+
+}
+@mixin prop_headerBackColor {
 	> .header {
 		background-color: transparent;
 	}
+
+}
+@mixin prop_headerGradient {
 	> .header {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_contentGradient {
 	> .container {
-		@include backGroundGradient('');
+		@include mixins.backGroundGradient('');
 	}
+
+}
+@mixin prop_borderColor {
 	border-color: #DFDFDF;
+
 	> .header {
 		border-color: #DFDFDF;
 	}
+
+}
+@mixin prop_borderStyle {
 	border-style: solid;
+
 	> .header {
 		border-bottom-style: solid;
 	}
+
+}
+@mixin prop_textColor {
 	> .header span {
 		color: #000000;
 	}
+
+}
+@mixin prop_imageColor {
 	> .header > svg {
 		fill: #000000;
 	}
+
+}
+@mixin prop_imageWidth {
 	> .header > img {
-		@include imageWidth(0);
+		@include mixins.imageWidth(0);
 	}
+
 	> .header > svg {
-		@include imageWidth(0);
+		@include mixins.imageWidth(0);
 	}
+
+}
+@mixin prop_imageHeight {
 	> .header > img {
-		@include imageHeight(0);
+		@include mixins.imageHeight(0);
 	}
+
 	> .header > svg {
-		@include imageHeight(0);
+		@include mixins.imageHeight(0);
 	}
+
+}
+@mixin prop_fontName {
 	> .header span {
 		font-family: Arial;
 	}
+
+}
+@mixin prop_fontSize {
 	> .header span {
 		font-size: 12px;
 	}
+
 	> .header {
 		height: 12px + 20px;
 	}
+
+}
+@mixin prop_bold {
 	> .header span {
-		@include font-weight-bold(true);
+		@include mixins.font-weight-bold(true);
 	}
+
+}
+@mixin prop_italic {
 	> .header span {
-		@include font-style-italic(false);
+		@include mixins.font-style-italic(false);
 	}
+
+}
+@mixin prop_textAlign {
 	> .header {
-		@include text-alignment(center);
+		@include mixins.text-alignment(center);
 	}
+
+}
+@mixin prop_opacity {
 	opacity: 1;
-	@include box-shadow(none);
+
+}
+@mixin prop_shadow {
+	@include mixins.box-shadow(none);
+
+}
+@mixin prop_padding {
 	> .container > .widgetContainer {
 		padding: 0px;
 	}
+
 	> .widgetContainer {
 		padding: 0px;
 	}
+
+}
+@mixin prop_margin {
 	margin: 0px 0px 12px 0px;
+
+}
+@mixin prop_alignItemsExt {
 	&.horizontal > .container {
-		@include flex-position('left top');
+		@include mixins.flex-position('left top');
 	}
+
+}
+
+@mixin base {
+  @include prop_width;
+  @include prop_height;
+  @include prop_borderWidth;
+  @include prop_cornerRadius;
+  @include prop_backColor;
+  @include prop_headerBackColor;
+  @include prop_headerGradient;
+  @include prop_contentGradient;
+  @include prop_borderColor;
+  @include prop_borderStyle;
+  @include prop_textColor;
+  @include prop_imageColor;
+  @include prop_imageWidth;
+  @include prop_imageHeight;
+  @include prop_fontName;
+  @include prop_fontSize;
+  @include prop_bold;
+  @include prop_italic;
+  @include prop_textAlign;
+  @include prop_opacity;
+  @include prop_shadow;
+  @include prop_padding;
+  @include prop_margin;
+  @include prop_alignItemsExt;
 
 }
 

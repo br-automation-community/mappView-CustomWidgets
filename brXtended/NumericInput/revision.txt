@@ -1,5 +1,8 @@
+Version 4
+- Update widget to mappView 6.4
+
 Version 3
-- Update widget to mappView 6.x
+- Update widget to mappView 6.3
 
 Version 2
 - Update error handling

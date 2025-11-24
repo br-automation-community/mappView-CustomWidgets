@@ -1,3 +1,6 @@
+#### 24.11.2025
+- Update numeric, drop down box, group box and transfer widgets to mapp 6.4
+
 #### 30.07.2025
 - Update numeric, drop down box and transfer widgets to mapp 6.3
 

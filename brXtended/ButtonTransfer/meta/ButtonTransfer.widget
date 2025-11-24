@@ -10,8 +10,7 @@
 				<File>widgets.js</File>
 				<File>brease.js</File>
 			</Files>
-			<Folders>
-			</Folders>
+			<Folders></Folders>
 			<Widgets>
 				<Widget>widgets.brXtended.ButtonTransfer</Widget>
 				<Widget>widgets.brease.Button</Widget>
@@ -34,8 +33,7 @@
 		<Parents>
 			<Parent>*</Parent>
 		</Parents>
-		<Children>
-		</Children>
+		<Children></Children>
 		<Methods>
 			<Method name="Download" read="false">
 				<Description>Download a file from the PLC and save it on the client device.</Description>
@@ -349,19 +347,19 @@ This property has no effect, if multiLine=false				</Description>
 		</Properties>
 		<StyleProperties>
 			<StyleProperty name="width" type="AutoSize" not_styleable="true" owner="widgets.brease.Button" category="Layout" groupRefId="Size" groupOrder="1" default="100">
-				<StyleElement attribute="@include elemAutoWidth($value)"/>
+				<StyleElement attribute="@include mixins.elemAutoWidth($value)"/>
 				<Description>outer width of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="height" type="AutoSize" not_styleable="true" owner="widgets.brease.Button" category="Layout" groupRefId="Size" groupOrder="2" default="30">
-				<StyleElement attribute="@include elemAutoHeight($value)"/>
+				<StyleElement attribute="@include mixins.elemAutoHeight($value)"/>
 				<Description>outer height of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="top" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="1">
-				<StyleElement attribute="@include elemTop($value)"/>
+				<StyleElement attribute="@include mixins.elemTop($value)"/>
 				<Description>absolute position measured from top boundary of parent container</Description>
 			</StyleProperty>
 			<StyleProperty name="left" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="2">
-				<StyleElement attribute="@include elemLeft($value)"/>
+				<StyleElement attribute="@include mixins.elemLeft($value)"/>
 				<Description>absolute position measured from left boundary of parent container</Description>
 			</StyleProperty>
 			<StyleProperty name="zIndex" type="UInteger" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" required="true">
@@ -371,29 +369,29 @@ This property has no effect, if multiLine=false				</Description>
         The zIndex must be unique within a content.&lt;br/&gt;				</Description>
 			</StyleProperty>
 			<StyleProperty name="minWidth" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="3" owner="widgets.brease.Button">
-				<StyleElement attribute="@include elemMinWidth($value)"/>
+				<StyleElement attribute="@include mixins.elemMinWidth($value)"/>
 				<Description>minimum outer width of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="maxWidth" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="4" owner="widgets.brease.Button">
-				<StyleElement attribute="@include elemMaxWidth($value)"/>
+				<StyleElement attribute="@include mixins.elemMaxWidth($value)"/>
 				<Description>maximum outer width of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="minHeight" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="5" owner="widgets.brease.Button">
-				<StyleElement attribute="@include elemMinHeight($value)"/>
+				<StyleElement attribute="@include mixins.elemMinHeight($value)"/>
 				<Description>minimum outer height of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="maxHeight" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="6" owner="widgets.brease.Button">
-				<StyleElement attribute="@include elemMaxHeight($value)"/>
+				<StyleElement attribute="@include mixins.elemMaxHeight($value)"/>
 				<Description>maximum outer height of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="imageWidth" type="ImageSize" not_styleable="true" category="Appearance" default="0" owner="widgets.brease.Button">
-				<StyleElement selector="img" attribute="@include imageWidth($value)"/>
-				<StyleElement selector="svg" attribute="@include imageWidth($value)"/>
+				<StyleElement selector="img" attribute="@include mixins.imageWidth($value)"/>
+				<StyleElement selector="svg" attribute="@include mixins.imageWidth($value)"/>
 				<Description>width of the image</Description>
 			</StyleProperty>
 			<StyleProperty name="imageHeight" type="ImageSize" not_styleable="true" category="Appearance" default="0" owner="widgets.brease.Button">
-				<StyleElement selector="img" attribute="@include imageHeight($value)"/>
-				<StyleElement selector="svg" attribute="@include imageHeight($value)"/>
+				<StyleElement selector="img" attribute="@include mixins.imageHeight($value)"/>
+				<StyleElement selector="svg" attribute="@include mixins.imageHeight($value)"/>
 				<Description>height of the image</Description>
 			</StyleProperty>
 			<StyleProperty name="imageColor" category="Appearance" type="Color" default="#000000" owner="widgets.brease.Button">
@@ -421,7 +419,7 @@ This property has no effect, if multiLine=false				</Description>
 				<Description>Sets the width of the border. For further information, please check its type</Description>
 			</StyleProperty>
 			<StyleProperty name="cornerRadius" type="PixelValCollection" category="Appearance" default="0px" owner="widgets.brease.Button">
-				<StyleElement attribute="@include border-radius($value)"/>
+				<StyleElement attribute="@include mixins.border-radius($value)"/>
 				<Description>Sets the radius of the widget rounded corners. For further information, please check its type</Description>
 			</StyleProperty>
 			<StyleProperty name="backColor" category="Appearance" type="Color" default="#DBDBDB" owner="widgets.brease.Button">
@@ -435,22 +433,22 @@ This property has no effect, if multiLine=false				</Description>
 				<Description>Sets the background color when disabled</Description>
 			</StyleProperty>
 			<StyleProperty name="backGroundGradient" category="Appearance" type="Gradient" default="" owner="widgets.brease.Button">
-				<StyleElement selector="&amp;:not(.disabled):not(.active):not(.checked)" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;:not(.disabled):not(.active):not(.checked)" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
 				<Description>Background as a gradient</Description>
 			</StyleProperty>
 			<StyleProperty name="disabledBackGroundGradient" category="Appearance" type="Gradient" default="" owner="widgets.brease.Button">
-				<StyleElement selector="&amp;.disabled" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
-				<StyleElement selector="&amp;.disabled.active" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
-				<StyleElement selector="&amp;.disabled.checked" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;.disabled" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;.disabled.active" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;.disabled.checked" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
 				<Description>Background as a gradient</Description>
 			</StyleProperty>
 			<StyleProperty name="mouseDownBackGroundGradient" category="Appearance" type="Gradient" default="" owner="widgets.brease.Button">
-				<StyleElement selector="&amp;.active:not(.disabled)" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
-				<StyleElement selector="&amp;.checked:not(.disabled)" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;.active:not(.disabled)" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;.checked:not(.disabled)" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
 				<Description>Background as a gradient when widget is clicked</Description>
 			</StyleProperty>
 			<StyleProperty name="backGround" category="Appearance" type="ImagePath" default="" owner="widgets.brease.Button">
-				<StyleElement attribute="@include pureBackgroundImage(&apos;../$value&apos;)"/>
+				<StyleElement attribute="@include mixins.pureBackgroundImage(&apos;../$value&apos;)"/>
 				<Description>Sets the path for an image as background</Description>
 			</StyleProperty>
 			<StyleProperty name="borderColor" category="Appearance" type="ColorCollection" default="#5B7C70" owner="widgets.brease.Button">
@@ -494,7 +492,7 @@ This property has no effect, if multiLine=false				</Description>
 				<Description>text color when widget is clicked</Description>
 			</StyleProperty>
 			<StyleProperty name="textAlign" category="Appearance" type="brease.enum.TextAlign" default="center" owner="widgets.brease.Button">
-				<StyleElement attribute="@include text-alignment($value)"/>
+				<StyleElement attribute="@include mixins.text-alignment($value)"/>
 				<Description>Alignment of the text</Description>
 			</StyleProperty>
 			<StyleProperty name="opacity" category="Appearance" type="Opacity" default="1" owner="widgets.brease.Button">
@@ -502,7 +500,7 @@ This property has no effect, if multiLine=false				</Description>
 				<Description>Opacity of the widget</Description>
 			</StyleProperty>
 			<StyleProperty name="rotation" category="Appearance" type="Rotation" default="0deg" owner="widgets.brease.Button">
-				<StyleElement attribute="@include rotate($value)"/>
+				<StyleElement attribute="@include mixins.rotate($value)"/>
 				<Description>Rotation of widget.</Description>
 			</StyleProperty>
 			<StyleProperty name="fontSize" category="Font" type="PixelVal" default="12px" owner="widgets.brease.Button">
@@ -514,11 +512,11 @@ This property has no effect, if multiLine=false				</Description>
 				<Description>Fontname of the text</Description>
 			</StyleProperty>
 			<StyleProperty name="bold" category="Font" type="Boolean" default="false" owner="widgets.brease.Button">
-				<StyleElement selector="span" attribute="@include font-weight-bold($value)"/>
+				<StyleElement selector="span" attribute="@include mixins.font-weight-bold($value)"/>
 				<Description>If *true* font style is bold</Description>
 			</StyleProperty>
 			<StyleProperty name="italic" category="Font" type="Boolean" default="false" owner="widgets.brease.Button">
-				<StyleElement selector="span" attribute="@include font-style-italic($value)"/>
+				<StyleElement selector="span" attribute="@include mixins.font-style-italic($value)"/>
 				<Description>If *true* font style is italic</Description>
 			</StyleProperty>
 			<StyleProperty name="padding" category="Layout" type="Padding" default="0px 10px" owner="widgets.brease.Button">
@@ -530,14 +528,14 @@ This property has no effect, if multiLine=false				</Description>
 				<Description>Margin of the Widget</Description>
 			</StyleProperty>
 			<StyleProperty name="shadow" type="Shadow" category="Appearance" default="none" owner="widgets.brease.Button">
-				<StyleElement selector="&amp;:not(.active):not(.checked)" attribute="@include box-shadow($value)"/>
-				<StyleElement selector="&amp;.disabled.active" attribute="@include box-shadow($value)"/>
-				<StyleElement selector="&amp;.disabled.checked" attribute="@include box-shadow($value)"/>
+				<StyleElement selector="&amp;:not(.active):not(.checked)" attribute="@include mixins.box-shadow($value)"/>
+				<StyleElement selector="&amp;.disabled.active" attribute="@include mixins.box-shadow($value)"/>
+				<StyleElement selector="&amp;.disabled.checked" attribute="@include mixins.box-shadow($value)"/>
 				<Description>Shadow of the Widget</Description>
 			</StyleProperty>
 			<StyleProperty name="mouseDownShadow" type="Shadow" category="Appearance" default="none" owner="widgets.brease.Button">
-				<StyleElement selector="&amp;.active:not(.disabled):not(.editMode)" attribute="@include box-shadow($value)"/>
-				<StyleElement selector="&amp;.checked:not(.disabled)" attribute="@include box-shadow($value)"/>
+				<StyleElement selector="&amp;.active:not(.disabled):not(.editMode)" attribute="@include mixins.box-shadow($value)"/>
+				<StyleElement selector="&amp;.checked:not(.disabled)" attribute="@include mixins.box-shadow($value)"/>
 				<Description>Shadow of the Widget when widget clicked</Description>
 			</StyleProperty>
 		</StyleProperties>

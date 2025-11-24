@@ -10,8 +10,7 @@
 				<File>widgets.js</File>
 				<File>brease.js</File>
 			</Files>
-			<Folders>
-			</Folders>
+			<Folders></Folders>
 			<Widgets>
 				<Widget>widgets.brXtended.NumericInput</Widget>
 				<Widget>widgets.brease.NumericInput</Widget>
@@ -33,8 +32,7 @@
 		<Parents>
 			<Parent>*</Parent>
 		</Parents>
-		<Children>
-		</Children>
+		<Children></Children>
 		<Methods>
 			<Method name="Focus" read="false">
 				<Description>Sets focus on the widget element, if it can be focused and keyboardOperation=true</Description>
@@ -285,19 +283,19 @@ or if autofocus should be disabled (-1)				</Description>
 		</Properties>
 		<StyleProperties>
 			<StyleProperty name="width" type="AutoSize" not_styleable="true" owner="widgets.brease.NumericInput" category="Layout" groupRefId="Size" groupOrder="1" default="100">
-				<StyleElement attribute="@include elemAutoWidth($value)"/>
+				<StyleElement attribute="@include mixins.elemAutoWidth($value)"/>
 				<Description>outer width of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="height" type="AutoSize" not_styleable="true" owner="widgets.brease.NumericInput" category="Layout" groupRefId="Size" groupOrder="2" default="30">
-				<StyleElement attribute="@include elemAutoHeight($value)"/>
+				<StyleElement attribute="@include mixins.elemAutoHeight($value)"/>
 				<Description>outer height of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="top" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="1">
-				<StyleElement attribute="@include elemTop($value)"/>
+				<StyleElement attribute="@include mixins.elemTop($value)"/>
 				<Description>absolute position measured from top boundary of parent container</Description>
 			</StyleProperty>
 			<StyleProperty name="left" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="2">
-				<StyleElement attribute="@include elemLeft($value)"/>
+				<StyleElement attribute="@include mixins.elemLeft($value)"/>
 				<Description>absolute position measured from left boundary of parent container</Description>
 			</StyleProperty>
 			<StyleProperty name="zIndex" type="UInteger" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" required="true">
@@ -307,19 +305,19 @@ or if autofocus should be disabled (-1)				</Description>
         The zIndex must be unique within a content.&lt;br/&gt;				</Description>
 			</StyleProperty>
 			<StyleProperty name="minWidth" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="3" owner="widgets.brease.NumericInput">
-				<StyleElement attribute="@include elemMinWidth($value)"/>
+				<StyleElement attribute="@include mixins.elemMinWidth($value)"/>
 				<Description>minimum outer width of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="maxWidth" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="4" owner="widgets.brease.NumericInput">
-				<StyleElement attribute="@include elemMaxWidth($value)"/>
+				<StyleElement attribute="@include mixins.elemMaxWidth($value)"/>
 				<Description>maximum outer width of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="minHeight" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="5" owner="widgets.brease.NumericInput">
-				<StyleElement attribute="@include elemMinHeight($value)"/>
+				<StyleElement attribute="@include mixins.elemMinHeight($value)"/>
 				<Description>minimum outer height of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="maxHeight" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="6" owner="widgets.brease.NumericInput">
-				<StyleElement attribute="@include elemMaxHeight($value)"/>
+				<StyleElement attribute="@include mixins.elemMaxHeight($value)"/>
 				<Description>maximum outer height of widget</Description>
 			</StyleProperty>
 			<StyleProperty name="borderWidth" category="Appearance" type="PixelValCollection" default="2px 6px 2px 2px" owner="widgets.brease.NumericInput">
@@ -335,7 +333,7 @@ or if autofocus should be disabled (-1)				</Description>
 				<Description>Sets the border width of the widget when disbaled. For further information, please see its type</Description>
 			</StyleProperty>
 			<StyleProperty name="cornerRadius" category="Appearance" type="PixelValCollection" default="0px" owner="widgets.brease.NumericInput">
-				<StyleElement attribute="@include border-radius($value)"/>
+				<StyleElement attribute="@include mixins.border-radius($value)"/>
 				<Description>Sets the radius of the widget rounded corners. For further information, please see its type</Description>
 			</StyleProperty>
 			<StyleProperty name="backColor" category="Appearance" type="Color" default="#FFFFFF" owner="widgets.brease.NumericInput">
@@ -347,11 +345,11 @@ or if autofocus should be disabled (-1)				</Description>
 				<Description>Sets the background color of the widget when disabled</Description>
 			</StyleProperty>
 			<StyleProperty name="backGroundGradient" category="Appearance" type="Gradient" default="" owner="widgets.brease.NumericInput">
-				<StyleElement selector="&amp;:not(.disabled)" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;:not(.disabled)" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
 				<Description>Background as a gradient</Description>
 			</StyleProperty>
 			<StyleProperty name="disabledBackGroundGradient" category="Appearance" type="Gradient" default="" owner="widgets.brease.NumericInput">
-				<StyleElement selector="&amp;.disabled" attribute="@include backGroundGradient(&apos;$value&apos;)"/>
+				<StyleElement selector="&amp;.disabled" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
 				<Description>Background as a gradient</Description>
 			</StyleProperty>
 			<StyleProperty name="borderColor" category="Appearance" type="ColorCollection" default="#555555" owner="widgets.brease.NumericInput">
@@ -391,7 +389,7 @@ or if autofocus should be disabled (-1)				</Description>
 				<Description>Sets the color of the displayed text when the widget is disabled</Description>
 			</StyleProperty>
 			<StyleProperty name="textAlign" category="Appearance" type="brease.enum.TextAlign" default="right" owner="widgets.brease.NumericInput">
-				<StyleElement selector="input" attribute="@include text-alignment($value)"/>
+				<StyleElement selector="input" attribute="@include mixins.text-alignment($value)"/>
 				<Description>Sets the alignment of the displayed text. For further information, please see its type</Description>
 			</StyleProperty>
 			<StyleProperty name="opacity" category="Appearance" type="Opacity" default="1" owner="widgets.brease.NumericInput">
@@ -415,27 +413,27 @@ or if autofocus should be disabled (-1)				</Description>
 				<Description>Defines in which font the unit text is displayed.</Description>
 			</StyleProperty>
 			<StyleProperty name="unitBold" category="Font" type="Boolean" default="false" owner="widgets.brease.NumericInput">
-				<StyleElement selector=".breaseNumericInput_unit" attribute="@include font-weight-bold($value)"/>
+				<StyleElement selector=".breaseNumericInput_unit" attribute="@include mixins.font-weight-bold($value)"/>
 				<Description>Defines whether the unit text is displayed in bold font.</Description>
 			</StyleProperty>
 			<StyleProperty name="unitItalic" category="Font" type="Boolean" default="false" owner="widgets.brease.NumericInput">
-				<StyleElement selector=".breaseNumericInput_unit" attribute="@include font-style-italic($value)"/>
+				<StyleElement selector=".breaseNumericInput_unit" attribute="@include mixins.font-style-italic($value)"/>
 				<Description>Defines whether the unit text is displayed in italic font.</Description>
 			</StyleProperty>
 			<StyleProperty name="rotation" category="Appearance" type="Rotation" default="0deg" owner="widgets.brease.NumericInput">
-				<StyleElement attribute="@include rotate($value)"/>
+				<StyleElement attribute="@include mixins.rotate($value)"/>
 				<Description>Sets the rotation of the widget with respect to its center. Positive values for clockwise direction</Description>
 			</StyleProperty>
 			<StyleProperty name="bold" category="Font" type="Boolean" default="true" owner="widgets.brease.NumericInput">
-				<StyleElement selector="input" attribute="@include font-weight-bold($value)"/>
+				<StyleElement selector="input" attribute="@include mixins.font-weight-bold($value)"/>
 				<Description>Sets the bold property of the displayed text</Description>
 			</StyleProperty>
 			<StyleProperty name="italic" category="Font" type="Boolean" default="false" owner="widgets.brease.NumericInput">
-				<StyleElement selector="input" attribute="@include font-style-italic($value)"/>
+				<StyleElement selector="input" attribute="@include mixins.font-style-italic($value)"/>
 				<Description>Sets the italic property of the displayed text</Description>
 			</StyleProperty>
 			<StyleProperty name="shadow" category="Appearance" type="Shadow" default="none" owner="widgets.brease.NumericInput">
-				<StyleElement attribute="@include box-shadow($value)"/>
+				<StyleElement attribute="@include mixins.box-shadow($value)"/>
 				<Description>Sets the shadow effect of the widget. For further information, please see its type</Description>
 			</StyleProperty>
 			<StyleProperty name="padding" category="Layout" type="Padding" default="0 15px 0 15px" owner="widgets.brease.NumericInput">

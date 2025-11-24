@@ -44,6 +44,9 @@ May also work with lower version: **YES**
 
 ## Revision History
 
+##### Version 3
+- Update to mapp 6.4
+
 ##### Version 2
 - Update widget to mappView 6.x
 - Rename property "verticalAnchorTop" to "verticalAnchorTopExt"
