@@ -6,7 +6,7 @@ This widget requires mapp File (see Automation Studio help GUID f5ac430b-e0ca-43
 
 ![](./images/transfer1.png)
 
-All file devices require a file device configuration. The file device configuration can be found in the target system configuration. If you want to allow access to "everyone" make sure that the anonymous user also has the role of "BR_Anonymous"
+All file devices require a file device configuration. The file device configuration can be found in the target system configuration. With AS6 you can no longer user anonymous token for file devices. You must login with a user that has at least the role BR_Engineer.
 
 #### Properties
 
@@ -62,7 +62,7 @@ This event is called when a transfer was not successful. Returns the error numbe
 
 Tested with
 
-* Automation Studio 6.3
+* Automation Studio 6.4
 * Minimum tested version 5.15
 * Expected to work with later version
 
@@ -70,7 +70,7 @@ May also work with lower version: **YES**
 
 ## Revision History
 
-##### Version 3
+##### Version 4
 - Update to mapp 6.4
 
 ##### Version 3
