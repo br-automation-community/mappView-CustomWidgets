@@ -21,7 +21,7 @@
 			<Category name="Category">Media</Category>
 		</Categories>
 		<Descriptions>
-			<Description name="short">Screenshot widget</Description>
+			<Description name="short">Transfer widget</Description>
 			<Description name="de">Dieses Widget dient zur Dateiübetragung</Description>
 			<Description name="en">This widget transfers a file</Description>
 		</Descriptions>
@@ -54,6 +54,10 @@
 				<Description>Returns maxFileSize.</Description>
 				<Result type="Integer"/>
 			</Method>
+			<Method name="GetMaxItemNameLength" read="true">
+				<Description>Returns maxItemNameLength.</Description>
+				<Result type="Integer"/>
+			</Method>
 			<Method name="RemoveImage" read="false">
 				<Description>Remove an image.</Description>
 			</Method>
@@ -79,6 +83,14 @@
 				<Description>Sets maxFileSize</Description>
 				<Arguments>
 					<Argument name="maxFileSize" type="Integer" index="0" required="true">
+						<Description>The maximum length of the value</Description>
+					</Argument>
+				</Arguments>
+			</Method>
+			<Method name="SetMaxItemNameLength" read="false">
+				<Description>Sets maxItemNameLength</Description>
+				<Arguments>
+					<Argument name="maxItemNameLength" type="Integer" index="0" required="true">
 						<Description>The maximum length of the value</Description>
 					</Argument>
 				</Arguments>
@@ -268,7 +280,7 @@
 			<Event name="OnError">
 				<Description>Fired when there is an error on the operation.</Description>
 				<Arguments>
-					<Argument name="response" type="Integer" index="0" required="true">
+					<Argument name="response" type="Number" index="0" required="true">
 						<Description>Number of error transmitted by the mapp component.</Description>
 					</Argument>
 				</Arguments>
@@ -303,6 +315,9 @@
 			</Property>
 			<Property name="maxFileSize" type="Integer" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Extended" defaultValue="10000000">
 				<Description>Maximum size of the transferred file</Description>
+			</Property>
+			<Property name="maxItemNameLength" type="Integer" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Extended" defaultValue="50">
+				<Description>Maximum length of the transferred file name</Description>
 			</Property>
 			<Property name="mouseDownImage" type="ImagePath" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="">
 				<Description>Path to an optional image for mouseDown.</Description>

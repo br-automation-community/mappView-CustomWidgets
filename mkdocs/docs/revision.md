@@ -1,3 +1,6 @@
+#### 27.04.2026
+- Transfer: Added property maxItemNameLength to limit the length of uploaded filenames
+
 #### 24.11.2025
 - Update numeric, drop down box, group box and transfer widgets to mapp 6.4
 

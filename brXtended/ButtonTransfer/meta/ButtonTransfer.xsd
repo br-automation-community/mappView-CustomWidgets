@@ -29,6 +29,8 @@
 			
 			<xs:attribute name="maxFileSize" use="optional" type="types:Integer" default="10000000" />
 			
+			<xs:attribute name="maxItemNameLength" use="optional" type="types:Integer" default="50" />
+			
 			<xs:attribute name="mouseDownImage" use="optional" type="types:ImagePath" default="" />
 			
 			<xs:attribute name="mouseDownText" use="optional" type="types:String" default="" />

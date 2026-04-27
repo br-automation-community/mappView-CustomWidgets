@@ -54,6 +54,12 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
+	<xs:complexType name="widgets.brXtended.ButtonTransfer.Action.GetMaxItemNameLength">
+		<xs:complexContent>
+			<xs:extension base="s1:widgets.brXtended.ButtonTransfer.ReadAction.widgetMethod">
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
 	<xs:complexType name="widgets.brXtended.ButtonTransfer.Action.RemoveImage">
 		<xs:complexContent>
 			<xs:extension base="s1:widgets.brXtended.ButtonTransfer.Action.widgetMethod">
@@ -90,6 +96,13 @@
 		<xs:complexContent>
 			<xs:extension base="s1:widgets.brXtended.ButtonTransfer.Action.widgetMethod">
 				<xs:attribute name="maxFileSize" type="var:Integer" use="required"></xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="widgets.brXtended.ButtonTransfer.Action.SetMaxItemNameLength">
+		<xs:complexContent>
+			<xs:extension base="s1:widgets.brXtended.ButtonTransfer.Action.widgetMethod">
+				<xs:attribute name="maxItemNameLength" type="var:Integer" use="required"></xs:attribute>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

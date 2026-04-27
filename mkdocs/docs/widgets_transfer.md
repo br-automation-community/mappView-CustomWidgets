@@ -14,6 +14,10 @@ All file devices require a file device configuration. The file device configurat
 
 This is the maximum size of the transferred file. Larger files will generate an error. The maxiumum value may vary on PLC performance and should be between 1.000 - 10.000.000 bytes. Values larger than 10 MB will be rejected.
 
+**maxItemNameLength**
+
+This is the maximum allowed length of the filename for uploaded files. If the filename exceeds this length, an error is generated and the upload is aborted. The valid range is 1–255 characters. The default value is 50.
+
 #### Additional Actions
 The widget derives all actions from the button widget.
 
@@ -54,9 +58,10 @@ This event is called when a transfer was not successful. Returns the error numbe
 
 | Error No  | Description  |
 |---|---|
-| 10000  | Unknown error. Can occur when the user aborts the screenshot |
+| 10100  | Unknown error. Can occur when the user aborts the transfer |
 | 10101  | File size error. The file larger than the parameter maxFileSize |
 | 10102  | File parameter error. The value for maxFileSize should be between 1.000 - 10.000.000 bytes |
+| 10103  | File name too long. The filename of the uploaded file exceeds the parameter maxItemNameLength |
 
 ## Requirements
 
@@ -69,6 +74,11 @@ Tested with
 May also work with lower version: **YES**
 
 ## Revision History
+
+##### Version 5
+- Added property maxItemNameLength to limit the length of uploaded filenames
+- Fixed error code for unknown errors (10100 instead of 10000)
+- Added error code 10103 for filenames exceeding maxItemNameLength
 
 ##### Version 4
 - Update to mapp 6.4

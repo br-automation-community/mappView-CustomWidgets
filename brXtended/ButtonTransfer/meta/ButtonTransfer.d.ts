@@ -21,6 +21,11 @@ interface widgets_brXtended_ButtonTransfer{
         getMaxFileSize(): Integer;
 
         /**
+        * Returns maxItemNameLength.
+        */
+        getMaxItemNameLength(): Integer;
+
+        /**
         * Remove an image.
         */
         removeImage(): void;
@@ -49,6 +54,11 @@ interface widgets_brXtended_ButtonTransfer{
         * Sets maxFileSize
         */
         setMaxFileSize(maxFileSize: Integer): void;
+
+        /**
+        * Sets maxItemNameLength
+        */
+        setMaxItemNameLength(maxItemNameLength: Integer): void;
 
         /**
         * Sets the image when mouse down
@@ -158,7 +168,7 @@ interface widgets_brXtended_ButtonTransfer{
         /**
         * Fired when there is an error on the operation.
         */
-        onError(handler: (e: { detail: { response: Integer } }) => void):void;
+        onError(handler: (e: { detail: { response: number } }) => void):void;
 
         /**
         * Fired when the visibility of the widget changes.
