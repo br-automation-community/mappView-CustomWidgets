@@ -8,7 +8,7 @@ This is a collection of customized widgets for mappView. The widgets are not off
 
 Use [**5_20_and_lower**](https://github.com/br-automation-community/mappView-CustomWidgets/tree/5_20_and_lower) branch for mapp 5.20 and lower
 
-Use [**5_24_and_lower**](https://github.com/br-automation-community/mappView-CustomWidgets/tree/5_24_and_lower) branch for mapp 5.20 and lower
+Use [**5_24_and_lower**](https://github.com/br-automation-community/mappView-CustomWidgets/tree/5_24_and_lower) branch for mapp 5.24 and lower
 
 ## [**For a detailed description follow this link**](https://br-automation-community.github.io/mappView-CustomWidgets/)
 
