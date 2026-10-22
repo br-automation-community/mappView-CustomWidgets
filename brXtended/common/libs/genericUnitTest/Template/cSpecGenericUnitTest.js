@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/genericUnitTest/TestUtils/GenericUnitTestConstants'
+    '../TestUtils/GenericUnitTestConstants'
 ], function (GenericUnitTestConstants) {
 
     'use strict';

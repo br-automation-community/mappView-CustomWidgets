@@ -1,3 +1,6 @@
+#### 22.10.2026
+- Added TimeInput widget (TIME datatype, optional milliseconds) and its TimePicker
+
 #### 27.04.2026
 - Transfer: Added property maxItemNameLength to limit the length of uploaded filenames
 

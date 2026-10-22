@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/flux/stores/ImageStore/ImageActionTypes'
+    './ImageActionTypes'
 ], function (ImageActionTypes) {
 
     'use strict';

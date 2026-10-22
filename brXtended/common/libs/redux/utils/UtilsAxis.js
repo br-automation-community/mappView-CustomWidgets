@@ -1,7 +1,7 @@
 'use strict';
 define([
     'libs/d3/d3', 
-    'widgets/brXtended/common/libs/redux/utils/UtilsNumeric', 
+    './UtilsNumeric', 
     'brease'
 ], function (d3, UtilsNumeric, { enum: { Enum }, helper: { numberFormatter } }) {
 

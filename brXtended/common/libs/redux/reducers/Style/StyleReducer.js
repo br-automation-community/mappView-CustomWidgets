@@ -1,6 +1,6 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Style/StyleActions',
-    'widgets/brXtended/common/libs/redux/utils/UtilsStyle'
+    './StyleActions',
+    '../../utils/UtilsStyle'
 ], function (StyleActions, UtilsStyle) {
 
     'use strict';

@@ -13,7 +13,7 @@
 				<File>./libs/view/DropDownBoxView/DropDownBoxView.js</File>
 				<File>./libs/config/InitState.js</File>
 				<File>./libs/reducer/DropDownBoxReducer.js</File>
-				<File>widgets/brXtended/common/libs/external/redux.js</File>
+				<File>../common/libs/external/redux.js</File>
 			</Files>
 			<Folders></Folders>
 			<Widgets>

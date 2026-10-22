@@ -1,10 +1,10 @@
 ﻿define([
-    'widgets/brXtended/common/libs/redux/reducers/Text/TextActions',
-    'widgets/brXtended/common/libs/redux/reducers/Image/ImageActions',
-    'widgets/brXtended/common/libs/redux/reducers/Status/StatusActions',
-    'widgets/brXtended/common/libs/redux/reducers/Size/SizeActions',
-    'widgets/brXtended/common/libs/redux/reducers/List/ListActions',
-    'widgets/brXtended/common/libs/redux/reducers/Style/StyleActions'
+    '../../../common/libs/redux/reducers/Text/TextActions',
+    '../../../common/libs/redux/reducers/Image/ImageActions',
+    '../../../common/libs/redux/reducers/Status/StatusActions',
+    '../../../common/libs/redux/reducers/Size/SizeActions',
+    '../../../common/libs/redux/reducers/List/ListActions',
+    '../../../common/libs/redux/reducers/Style/StyleActions'
 ], function (TextActions, ImageActions, StatusActions, SizeActions, ListActions, StyleActions) {
 
     'use strict';

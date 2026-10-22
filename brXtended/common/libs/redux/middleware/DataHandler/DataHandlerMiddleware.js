@@ -1,7 +1,7 @@
 'use strict';
 define([
     'brease',
-    'widgets/brXtended/common/libs/redux/reducers/DataHandler/DataHandlerActions'
+    '../../reducers/DataHandler/DataHandlerActions'
 ], function ({ callWidget,
     config: breaseConfig,
     events: { BreaseEvent },

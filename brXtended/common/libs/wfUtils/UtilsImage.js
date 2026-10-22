@@ -1,7 +1,7 @@
 'use strict';
 define([
     'libs/d3/d3',
-    'widgets/brXtended/common/libs/wfUtils/SVGCache',
+    './SVGCache',
     'brease'
 ], function (d3, SVGCache, { enum: { Enum }, core: { Utils }, services }) {
 

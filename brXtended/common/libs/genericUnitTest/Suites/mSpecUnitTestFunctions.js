@@ -1,6 +1,6 @@
 define([
-    'widgets/brXtended/common/libs/genericUnitTest/TestUtils/GenericUnitTestUtils',
-    'widgets/brXtended/common/libs/Test/Jasmine-moduleTest'
+    '../TestUtils/GenericUnitTestUtils',
+    '../../Test/Jasmine-moduleTest'
 ], function (GenericUnitTestUtils) {
 
     'use strict';

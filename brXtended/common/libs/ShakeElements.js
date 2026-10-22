@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/ChildHandling'
+    './ChildHandling'
 ], function (ChildHandling) {
 
     'use strict';

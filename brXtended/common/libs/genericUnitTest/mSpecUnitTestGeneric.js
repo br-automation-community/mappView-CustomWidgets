@@ -1,10 +1,10 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/genericUnitTest/Suites/mSpecUnitTestInit',
-    'widgets/brXtended/common/libs/genericUnitTest/Suites/mSpecUnitTestFunctions',
-    'widgets/brXtended/common/libs/genericUnitTest/TestUtils/GenericUnitTestMatchers',
+    './Suites/mSpecUnitTestInit',
+    './Suites/mSpecUnitTestFunctions',
+    './TestUtils/GenericUnitTestMatchers',
     'brTest',
-    'widgets/brXtended/common/libs/Test/Jasmine-moduleTest'
+    '../Test/Jasmine-moduleTest'
 ], function (
     mSpecUnitTestInit, mSpecUnitTestFunctions, GenericUnitTestMatchers, { jasmine: { matcherFactory } }
 ) {

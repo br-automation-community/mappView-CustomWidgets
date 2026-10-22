@@ -1,4 +1,4 @@
-define(['widgets/brXtended/common/libs/redux/reducers/Orientation/OrientationActions'],
+define(['./OrientationActions'],
     function (OrientationActions) {
 
         'use strict';

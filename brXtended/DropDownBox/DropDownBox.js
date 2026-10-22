@@ -6,7 +6,7 @@ define([
     './libs/view/DropDownBoxView/DropDownBoxView',
     './libs/config/InitState',
     './libs/reducer/DropDownBoxReducer',
-    'widgets/brXtended/common/libs/external/redux',
+    '../common/libs/external/redux',
 ], function (
     brease,
     widgets,

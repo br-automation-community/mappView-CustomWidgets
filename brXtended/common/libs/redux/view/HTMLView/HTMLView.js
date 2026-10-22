@@ -1,7 +1,7 @@
 'use strict';
 define(['brease',
-    'widgets/brXtended/common/libs/BoxLayout',
-    'widgets/brXtended/common/libs/wfUtils/UtilsCommon'
+    '../../../BoxLayout',
+    '../../../wfUtils/UtilsCommon'
 ], function ({ services }, BoxLayout, Utils) {
     /**
     * @class widgets.brXtended.common.libs.redux.view.HTMLView.HTMLView

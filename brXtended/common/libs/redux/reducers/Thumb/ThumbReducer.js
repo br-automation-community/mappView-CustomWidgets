@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Thumb/ThumbActions'
+    './ThumbActions'
 ], function (ThumbActions) {
 
     'use strict';

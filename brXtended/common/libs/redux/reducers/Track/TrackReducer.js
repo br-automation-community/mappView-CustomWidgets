@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Track/TrackActions'
+    './TrackActions'
 ], function (TrackActions) {
 
     'use strict';

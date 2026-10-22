@@ -1,6 +1,6 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Image/ImageActions',
-    'widgets/brXtended/common/libs/redux/utils/UtilsImage'
+    './ImageActions',
+    '../../utils/UtilsImage'
 ], function (ImageActions, UtilsImage) {
 
     'use strict';

@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Scale/ScaleActions'
+    './ScaleActions'
 ], function (ScaleActions) {
 
     'use strict';

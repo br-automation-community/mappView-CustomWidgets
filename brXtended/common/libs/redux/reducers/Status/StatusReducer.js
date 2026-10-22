@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Status/StatusActions'
+    './StatusActions'
 ], function (StatusActions) {
 
     'use strict';

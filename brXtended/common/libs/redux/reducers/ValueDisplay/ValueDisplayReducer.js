@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/ValueDisplay/ValueDisplayActions'
+    './ValueDisplayActions'
 ], function (ValueDisplayActions) {
 
     'use strict';

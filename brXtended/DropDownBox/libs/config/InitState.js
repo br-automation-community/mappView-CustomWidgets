@@ -1,8 +1,8 @@
 define([
-    'widgets/brXtended/common/libs/redux/utils/UtilsImage',
-    'widgets/brXtended/common/libs/redux/utils/UtilsText',
-    'widgets/brXtended/common/libs/redux/utils/UtilsList',
-    'widgets/brXtended/common/libs/redux/utils/UtilsStyle'
+    '../../../common/libs/redux/utils/UtilsImage',
+    '../../../common/libs/redux/utils/UtilsText',
+    '../../../common/libs/redux/utils/UtilsList',
+    '../../../common/libs/redux/utils/UtilsStyle'
 ], function (UtilsImage, UtilsText, UtilsList, UtilsStyle) {
 
     'use strict';

@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Format/FormatActions'
+    './FormatActions'
 ], function (FormatActions) {
 
     'use strict';

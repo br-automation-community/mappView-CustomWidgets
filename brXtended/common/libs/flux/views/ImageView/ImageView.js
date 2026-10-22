@@ -1,6 +1,6 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/flux/stores/ImageStore/ImageTypes',
+    '../../stores/ImageStore/ImageTypes',
     'brease'
 ], function (ImageTypes, { enum: { Enum } }) {
     var ImageView = function (store, dispatcher, parent) {
