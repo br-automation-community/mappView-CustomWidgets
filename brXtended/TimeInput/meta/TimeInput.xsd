@@ -21,7 +21,7 @@
 			
 			<xs:attribute name="format" use="optional" type="types:String" default="HH:mm:ss" />
 			
-			<xs:attribute name="millisecondStep" use="optional" type="types:Integer" default="1" />
+			<xs:attribute name="millisecondStep" use="optional" type="types:Integer" default="100" />
 			
 			<xs:attribute name="pickerPosition" use="optional" type="types:brease.enum.Position" default="right" />
 			

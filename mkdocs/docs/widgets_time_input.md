@@ -47,7 +47,7 @@ Display format of the input field. It uses the **Globalize** tokens used by brea
 
 If `format` already contains a millisecond token (`f`/`F`), nothing is appended.
 
-**millisecondStep** *(Integer, default `1`)*
+**millisecondStep** *(Integer, default `100`)*
 
 Step of the millisecond wheel. Only values that are multiples of the step are offered:
 

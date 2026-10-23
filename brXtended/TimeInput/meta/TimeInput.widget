@@ -194,7 +194,7 @@
 				<Description>Specifies the format of the time shown in the input field.
 Milliseconds use the Globalize token f/ff/fff (e.g. HH:mm:ss.fff), not S.				</Description>
 			</Property>
-			<Property name="millisecondStep" type="Integer" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="1">
+			<Property name="millisecondStep" type="Integer" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="100">
 				<Description>Step size for the millisecond wheel in the picker (e.g. 1, 10, 100).</Description>
 			</Property>
 			<Property name="permissionOperate" type="RoleCollection" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Accessibility">

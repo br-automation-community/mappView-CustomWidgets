@@ -54,7 +54,7 @@ define([
      */
 
     /**
-     * @cfg {Integer} millisecondStep=1
+     * @cfg {Integer} millisecondStep=100
      * @iatStudioExposed
      * @iatCategory Behavior
      * Step size for the millisecond wheel in the picker (e.g. 1, 10, 100).
@@ -70,7 +70,7 @@ define([
     var defaultSettings = {
             format: 'HH:mm:ss',
             showMilliseconds: false,
-            millisecondStep: 1,
+            millisecondStep: 100,
             value: 0
         },
 
