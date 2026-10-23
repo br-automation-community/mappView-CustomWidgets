@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/utils/UtilsAxis'
+    '../../utils/UtilsAxis'
 ], function (UtilsAxis) {
 
     'use strict';

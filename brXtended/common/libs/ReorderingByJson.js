@@ -1,6 +1,6 @@
 'use strict';
 define(['brease',
-    'widgets/brXtended/common/libs/redux/utils/UtilsJSON'
+    './redux/utils/UtilsJSON'
 ], function ({ controller: { uiController } }, UtilsJSON) {
 
     /**

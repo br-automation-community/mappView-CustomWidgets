@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/UseDigitGrouping/UseDigitGroupingActions'
+    './UseDigitGroupingActions'
 ], function (UseDigitGroupingActions) {
 
     'use strict';

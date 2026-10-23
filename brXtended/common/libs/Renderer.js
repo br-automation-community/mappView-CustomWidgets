@@ -2,7 +2,7 @@
 define([
     'brease',
     'libs/d3/d3',
-    'widgets/brXtended/common/libs/ChartUtils'
+    './ChartUtils'
 ], function ({ core: { Class: SuperClass, Utils }, events: { BreaseEvent }, enum: { Enum }, helper: { dateFormatter }, services: { language } }, d3, ChartUtils) {
 
     /**

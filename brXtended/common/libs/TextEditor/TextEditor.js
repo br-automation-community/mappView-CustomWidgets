@@ -1,10 +1,10 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/external/ace/ace',
-    'widgets/brXtended/common/libs/TextEditor/Commands',
+    '../external/ace/ace',
+    './Commands',
     'brease',
-    'widgets/brXtended/common/libs/external/ace/ext/language_tools',
-    'widgets/brXtended/common/libs/external/ace/tooltip'
+    '../external/ace/ext/language_tools',
+    '../external/ace/tooltip'
 ], function (ace, Commands, { core: { Utils } }, langTools, Tooltip) {
 
     /**

@@ -1,8 +1,8 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/flux/stores/ImageStore/ImageActionTypes',
-    'widgets/brXtended/common/libs/flux/stores/ImageStore/ImageTypes',
-    'widgets/brXtended/common/libs/wfUtils/UtilsImage',
+    './ImageActionTypes',
+    './ImageTypes',
+    '../../../wfUtils/UtilsImage',
     'brease'
 ], function (ImageActionTypes, ImageTypes, UtilsImage, { enum: { Enum }, core: { Utils } }) {
 

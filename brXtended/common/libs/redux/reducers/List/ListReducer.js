@@ -1,7 +1,7 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/redux/reducers/List/ListActions',
-    'widgets/brXtended/common/libs/redux/utils/UtilsList',
+    './ListActions',
+    '../../utils/UtilsList',
     'brease'
 ], function (ListActions, UtilsList, { core: { Utils } }) {
 

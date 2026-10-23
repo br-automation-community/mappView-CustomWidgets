@@ -1,7 +1,7 @@
 'use strict';
 define(['brease',
-    'widgets/brXtended/common/libs/redux/reducers/DataHandler/DataHandlerActions',
-    'widgets/brXtended/common/libs/redux/utils/UtilsDataHandler'
+    './DataHandlerActions',
+    '../../utils/UtilsDataHandler'
 ], function ({ callWidget }, DataHandlerActions, UtilsDataHandler) {
    
     /**

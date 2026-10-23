@@ -1,7 +1,7 @@
 'use strict';
 define([
     'brTest',
-    'widgets/brXtended/common/libs/genericUnitTest/TestUtils/GenericUnitTestConstants'
+    './GenericUnitTestConstants'
 ], function ({ core: { BaseWidget },
     config: breaseConfig,
     controller: { uiController }, 

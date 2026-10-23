@@ -1,8 +1,8 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/redux/view/ListView/ListView',
-    'widgets/brXtended/common/libs/redux/view/ItemView/ItemView',
-    'widgets/brXtended/DropDownBox/libs/reducer/DropDownBoxActions',
+    '../../../../common/libs/redux/view/ListView/ListView',
+    '../../../../common/libs/redux/view/ItemView/ItemView',
+    '../../reducer/DropDownBoxActions',
     'brease'
 ], function (ListView, ItemView, DropDownBoxActions, { appView, bodyEl, enum: { Enum }, core: { Utils }, events: { BreaseEvent, EventDispatcher }, controller: { popUpManager } }) {
     const listPositionExtOff = 0;

@@ -1,6 +1,6 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/redux/view/ItemView/ItemView',
+    '../ItemView/ItemView',
     'brease'
 ], function (ItemView, {
     appElem,

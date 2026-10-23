@@ -5,6 +5,7 @@
   <Mapping parameter="widgets.brXtended.ButtonTransfer.Action.SetEnable.value" type="BOOL" oType="Boolean" index="0"/>
   <Mapping parameter="widgets.brXtended.ButtonTransfer.Action.SetImage.image" type="ANY_STRING" oType="ImagePath" index="0"/>
   <Mapping parameter="widgets.brXtended.ButtonTransfer.Action.SetMaxFileSize.maxFileSize" type="ANY_INT" oType="Integer" index="0"/>
+  <Mapping parameter="widgets.brXtended.ButtonTransfer.Action.SetMaxItemNameLength.maxItemNameLength" type="ANY_INT" oType="Integer" index="0"/>
   <Mapping parameter="widgets.brXtended.ButtonTransfer.Action.SetMouseDownImage.mouseDownImage" type="ANY_STRING" oType="ImagePath" index="0"/>
   <Mapping parameter="widgets.brXtended.ButtonTransfer.Action.SetMouseDownText.text" type="ANY_STRING" oType="String" index="0"/>
   <Mapping parameter="widgets.brXtended.ButtonTransfer.Action.SetMouseDownText.keepKey" type="BOOL" oType="Boolean" index="1"/>
@@ -26,4 +27,8 @@
   <Mapping parameter="widgets.brXtended.NumericInput.Action.SetStyle.value" type="ANY_STRING" oType="StyleReference" index="0"/>
   <Mapping parameter="widgets.brXtended.NumericInput.Action.SetValue.value" type="ANY_REAL" oType="Number" index="0"/>
   <Mapping parameter="widgets.brXtended.NumericInput.Action.SetVisible.value" type="BOOL" oType="Boolean" index="0"/>
+  <Mapping parameter="widgets.brXtended.TimeInput.Action.SetEnable.value" type="BOOL" oType="Boolean" index="0"/>
+  <Mapping parameter="widgets.brXtended.TimeInput.Action.SetStyle.value" type="ANY_STRING" oType="StyleReference" index="0"/>
+  <Mapping parameter="widgets.brXtended.TimeInput.Action.SetValue.value" type="ANY_INT" oType="Time" index="0"/>
+  <Mapping parameter="widgets.brXtended.TimeInput.Action.SetVisible.value" type="BOOL" oType="Boolean" index="0"/>
 </Mappings>

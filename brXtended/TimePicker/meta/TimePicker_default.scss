@@ -1,0 +1,4 @@
+@use "TimePicker_base.scss" as widgets_brXtended_TimePicker;
+.widgets_brXtended_TimePicker_style_default {
+  @include widgets_brXtended_TimePicker.base
+}

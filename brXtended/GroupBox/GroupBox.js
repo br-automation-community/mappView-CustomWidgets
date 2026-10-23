@@ -1,9 +1,9 @@
 'use strict';
 define([
     'brease',
-    'widgets/brXtended/common/libs/wfUtils/UtilsImage',
-    'widgets/brXtended/common/DragDropProperties/libs/DroppablePropertiesEvents',
-    'widgets/brXtended/GroupBox/libs/EditorHandles'
+    '../common/libs/wfUtils/UtilsImage',
+    '../common/DragDropProperties/libs/DroppablePropertiesEvents',
+    './libs/EditorHandles'
 ], function ({
     config: breaseConfig,
     core: { ContainerWidget, Types, Utils, CommonCSSClasses },

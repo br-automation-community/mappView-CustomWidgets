@@ -8,9 +8,9 @@
 		<Dependencies>
 			<Files>
 				<File>brease.js</File>
-				<File>widgets/brXtended/common/libs/wfUtils/UtilsImage.js</File>
-				<File>widgets/brXtended/common/DragDropProperties/libs/DroppablePropertiesEvents.js</File>
-				<File>widgets/brXtended/GroupBox/libs/EditorHandles.js</File>
+				<File>../common/libs/wfUtils/UtilsImage.js</File>
+				<File>../common/DragDropProperties/libs/DroppablePropertiesEvents.js</File>
+				<File>./libs/EditorHandles.js</File>
 			</Files>
 			<Folders></Folders>
 			<Widgets>

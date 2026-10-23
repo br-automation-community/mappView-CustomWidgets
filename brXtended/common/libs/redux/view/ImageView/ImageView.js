@@ -1,6 +1,6 @@
 define([
-    'widgets/brXtended/common/libs/BoxLayout',
-    'widgets/brXtended/common/libs/wfUtils/UtilsImage'
+    '../../../BoxLayout',
+    '../../../wfUtils/UtilsImage'
 ], function (BoxLayout, UtilsImage) {
 
     'use strict';

@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WidgetLibrary xmlns="http://www.br-automation.com/iat2014/widget">
+	<Widget name="widgets.brXtended.TimeInput">
+		<ASEngineeringInfo>
+			<IsProjectable>true</IsProjectable>
+			<LicenseInfo>unlicensed</LicenseInfo>
+		</ASEngineeringInfo>
+		<Dependencies>
+			<Files>
+				<File>widgets.js</File>
+				<File>brease.js</File>
+				<File>../TimePicker/TimePicker.js</File>
+			</Files>
+			<Folders></Folders>
+			<Widgets>
+				<Widget>widgets.brXtended.TimeInput</Widget>
+				<Widget>widgets.brease.DateTimeInput</Widget>
+			</Widgets>
+		</Dependencies>
+		<Categories>
+			<Category name="Category">DateTime</Category>
+		</Categories>
+		<Descriptions>
+			<Description name="short">Zeit-Eingabe (TIME)</Description>
+			<Description name="de">Ermöglicht dem Benutzer einen Zeitwert (TIME) einzugeben</Description>
+			<Description name="en">Enables the user to enter a time value (TIME)</Description>
+		</Descriptions>
+		<Inheritance>
+			<Class level="0">widgets.brXtended.TimeInput</Class>
+			<Class level="1">widgets.brease.DateTimeInput</Class>
+			<Class level="2">brease.core.BaseWidget</Class>
+		</Inheritance>
+		<Parents>
+			<Parent>*</Parent>
+		</Parents>
+		<Children></Children>
+		<Methods>
+			<Method name="Focus" read="false">
+				<Description>Sets focus on the widget element, if it can be focused and keyboardOperation=true</Description>
+			</Method>
+			<Method name="GetValue" read="true">
+				<Description>Get the value of input field as time (ms)</Description>
+				<Result type="Time"/>
+			</Method>
+			<Method name="SetEnable" read="false">
+				<Description>Sets the state of property &quot;enable&quot;</Description>
+				<Arguments>
+					<Argument name="value" type="Boolean" index="0" required="true"/>
+				</Arguments>
+			</Method>
+			<Method name="SetStyle" read="false">
+				<Arguments>
+					<Argument name="value" type="StyleReference" index="0" required="true"/>
+				</Arguments>
+			</Method>
+			<Method name="SetValue" read="false">
+				<Description>Set the value of input field as a time value (ms)</Description>
+				<Arguments>
+					<Argument name="value" type="Time" index="0" required="true"/>
+				</Arguments>
+			</Method>
+			<Method name="SetVisible" read="false">
+				<Description>Sets the state of property &quot;visible&quot;</Description>
+				<Arguments>
+					<Argument name="value" type="Boolean" index="0" required="true"/>
+				</Arguments>
+			</Method>
+			<Method name="ShowTooltip" read="false"/>
+		</Methods>
+		<Events>
+			<Event name="Click">
+				<Description>Fired when element is clicked on.</Description>
+				<Arguments>
+					<Argument name="origin" type="String" index="0" required="true">
+						<Description>id of widget that triggered this event</Description>
+					</Argument>
+					<Argument name="horizontalPos" type="String" index="1" required="true">
+						<Description>horizontal position of click in pixel i.e &apos;10px&apos;</Description>
+					</Argument>
+					<Argument name="verticalPos" type="String" index="2" required="true">
+						<Description>vertical position of click in pixel i.e &apos;10px&apos;</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="DisabledClick">
+				<Description>Fired when disabled element is clicked on.</Description>
+				<Arguments>
+					<Argument name="origin" type="String" index="0" required="true">
+						<Description>id of widget that triggered this event</Description>
+					</Argument>
+					<Argument name="hasPermission" type="Boolean" index="1" required="true">
+						<Description>defines if the state is caused due to missing roles of the current user</Description>
+					</Argument>
+					<Argument name="horizontalPos" type="String" index="2" required="true">
+						<Description>horizontal position of click in pixel i.e &apos;10px&apos;</Description>
+					</Argument>
+					<Argument name="verticalPos" type="String" index="3" required="true">
+						<Description>vertical position of click in pixel i.e &apos;10px&apos;</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="EnableChanged">
+				<Description>Fired when operability of the widget changes.</Description>
+				<Arguments>
+					<Argument name="value" type="Boolean" index="0" required="true">
+						<Description>operability</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="FocusIn">
+				<Description>Fired when the widgets gets focus</Description>
+			</Event>
+			<Event name="FocusOut">
+				<Description>Fired when the widgets lost focus</Description>
+			</Event>
+			<Event name="OnDragEnd">
+				<Description>Fired when element has OnDragEnd.</Description>
+				<Arguments>
+					<Argument name="contentId" type="String" index="0" required="true">
+						<Description>content id of the widget where the drag operation has ended</Description>
+					</Argument>
+					<Argument name="widgetId" type="String" index="1" required="true">
+						<Description>id of the widget where the drag operation has ended</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="OnDragEnter">
+				<Description>Fired when element has onDragEnter.</Description>
+				<Arguments>
+					<Argument name="contentId" type="String" index="0" required="true">
+						<Description>content id of the widget that has been entering the droppable widget</Description>
+					</Argument>
+					<Argument name="widgetId" type="String" index="1" required="true">
+						<Description>id of the widget that has been entering the droppable widget</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="OnDragLeave">
+				<Description>Fired when element has OnDragLeave.</Description>
+				<Arguments>
+					<Argument name="contentId" type="String" index="0" required="true">
+						<Description>content id of the widget that has been leaving the droppable widget</Description>
+					</Argument>
+					<Argument name="widgetId" type="String" index="1" required="true">
+						<Description>id of the widget that has been leaving the droppable widget</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="OnDragStart">
+				<Description>Fired when element has OnDragStart.</Description>
+				<Arguments>
+					<Argument name="contentId" type="String" index="0" required="true">
+						<Description>content id of the widget where the drag operation has been started</Description>
+					</Argument>
+					<Argument name="widgetId" type="String" index="1" required="true">
+						<Description>id of the widget where the drag operation has been started</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="OnDrop">
+				<Description>Fired when element has OnDrop.</Description>
+				<Arguments>
+					<Argument name="contentId" type="String" index="0" required="true">
+						<Description>content id of the widget that has been dropped on the droppable widget</Description>
+					</Argument>
+					<Argument name="widgetId" type="String" index="1" required="true">
+						<Description>id of the widget that has been dropped on the droppable widget</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+			<Event name="ValueChanged">
+				<Description>Fired when the value changes.</Description>
+				<Arguments>
+					<Argument name="value" type="Time" index="0" required="true"/>
+				</Arguments>
+			</Event>
+			<Event name="VisibleChanged">
+				<Description>Fired when the visibility of the widget changes.</Description>
+				<Arguments>
+					<Argument name="value" type="Boolean" index="0" required="true">
+						<Description>visibility</Description>
+					</Argument>
+				</Arguments>
+			</Event>
+		</Events>
+		<Properties>
+			<Property name="draggable" type="Boolean" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="false">
+				<Description>Make widget draggable.</Description>
+			</Property>
+			<Property name="enable" type="Boolean" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="true">
+				<Description>Initial option to enable widget.</Description>
+			</Property>
+			<Property name="format" type="String" initOnly="false" localizable="true" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="HH:mm:ss">
+				<Description>Specifies the format of the time shown in the input field.
+Milliseconds use the Globalize token f/ff/fff (e.g. HH:mm:ss.fff), not S.				</Description>
+			</Property>
+			<Property name="millisecondStep" type="Integer" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="100">
+				<Description>Step size for the millisecond wheel in the picker (e.g. 1, 10, 100).</Description>
+			</Property>
+			<Property name="permissionOperate" type="RoleCollection" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Accessibility">
+				<Description>restricts operability to users, which have given roles</Description>
+			</Property>
+			<Property name="permissionView" type="RoleCollection" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Accessibility">
+				<Description>restricts visibility to users, which have given roles</Description>
+			</Property>
+			<Property name="pickerPosition" type="brease.enum.Position" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="right">
+				<Description>Determines the position of the DateTimePicker relative to the opener.</Description>
+			</Property>
+			<Property name="showMilliseconds" type="Boolean" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="false">
+				<Description>Shows milliseconds in the display format and enables the millisecond wheel in the picker.</Description>
+			</Property>
+			<Property name="style" type="StyleReference" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="default">
+				<Description>reference to a style for this widget type</Description>
+			</Property>
+			<Property name="submitOnChange" type="Boolean" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="true">
+				<Description>Determines if changes, triggered by user input, should be sent immediately to the server.</Description>
+			</Property>
+			<Property name="tabIndex" type="Integer" initOnly="true" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="0">
+				<Description>sets if a widget should have autofocus enabled (0), the order of the focus (&gt;0),
+or if autofocus should be disabled (-1)				</Description>
+			</Property>
+			<Property name="tooltip" type="String" initOnly="true" localizable="true" editableBinding="false" readOnly="false" required="false" projectable="true" category="Appearance" defaultValue="">
+				<Description>reference to a tooltip for a widget</Description>
+			</Property>
+			<Property name="value" type="Time" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Data" defaultValue="0">
+				<Description>Set the Time value in milliseconds (TIME datatype), limited to 24 hours (0 up to 86399999 ms).</Description>
+			</Property>
+			<Property name="visible" type="Boolean" initOnly="false" localizable="false" editableBinding="false" readOnly="false" required="false" projectable="true" category="Behavior" defaultValue="true">
+				<Description>change visibility</Description>
+			</Property>
+		</Properties>
+		<StyleProperties>
+			<StyleProperty name="width" type="AutoSize" not_styleable="true" owner="widgets.brXtended.TimeInput" category="Layout" groupRefId="Size" groupOrder="1" default="250">
+				<StyleElement attribute="@include mixins.elemAutoWidth($value)"/>
+				<Description>outer width of widget</Description>
+			</StyleProperty>
+			<StyleProperty name="height" type="AutoSize" not_styleable="true" owner="widgets.brXtended.TimeInput" category="Layout" groupRefId="Size" groupOrder="2" default="30">
+				<StyleElement attribute="@include mixins.elemAutoHeight($value)"/>
+				<Description>outer height of widget</Description>
+			</StyleProperty>
+			<StyleProperty name="top" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="1">
+				<StyleElement attribute="@include mixins.elemTop($value)"/>
+				<Description>absolute position measured from top boundary of parent container</Description>
+			</StyleProperty>
+			<StyleProperty name="left" type="Integer" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" groupRefId="Position" groupOrder="2">
+				<StyleElement attribute="@include mixins.elemLeft($value)"/>
+				<Description>absolute position measured from left boundary of parent container</Description>
+			</StyleProperty>
+			<StyleProperty name="zIndex" type="UInteger" not_styleable="true" owner="brease.core.BaseWidget" category="Layout" required="true">
+				<StyleElement attribute="z-index"/>
+				<Description>The zIndex property specifies the z-order of a widget and its childs.&lt;br/&gt;
+        When widgets overlap, z-order determines which one covers the other. A widget with a larger zIndex generally covers a widget with a lower one.&lt;br/&gt;
+        The zIndex must be unique within a content.&lt;br/&gt;				</Description>
+			</StyleProperty>
+			<StyleProperty name="minWidth" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="3" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.elemMinWidth($value)"/>
+				<Description>minimum outer width of widget</Description>
+			</StyleProperty>
+			<StyleProperty name="maxWidth" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="4" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.elemMaxWidth($value)"/>
+				<Description>maximum outer width of widget</Description>
+			</StyleProperty>
+			<StyleProperty name="minHeight" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="5" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.elemMinHeight($value)"/>
+				<Description>minimum outer height of widget</Description>
+			</StyleProperty>
+			<StyleProperty name="maxHeight" type="Size" not_styleable="true" default="0" category="Layout" groupRefId="Size" groupOrder="6" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.elemMaxHeight($value)"/>
+				<Description>maximum outer height of widget</Description>
+			</StyleProperty>
+			<StyleProperty name="borderWidth" category="Appearance" type="PixelValCollection" default="2px 6px 2px 2px" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;:not(.disabled):not(.active)" attribute="border-width"/>
+				<Description>Sets the width of the border. For further information, please check its type</Description>
+			</StyleProperty>
+			<StyleProperty name="activeBorderWidth" category="Appearance" type="PixelValCollection" default="2px 6px 2px 2px" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.active:not(.disabled)" attribute="border-width"/>
+				<Description>Sets the width of the border while widget is operated. For further information, please see its type</Description>
+			</StyleProperty>
+			<StyleProperty name="disabledBorderWidth" category="Appearance" type="PixelValCollection" default="2px 6px 2px 2px" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.disabled" attribute="border-width"/>
+				<Description>Sets the border width of the widget when disabled. For further information, please see its type</Description>
+			</StyleProperty>
+			<StyleProperty name="cornerRadius" category="Appearance" type="PixelValCollection" default="0px" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.border-radius($value)"/>
+				<Description>Sets the radius of the widget rounded corners. For further information, please check its type</Description>
+			</StyleProperty>
+			<StyleProperty name="backColor" category="Appearance" type="Color" default="#FFFFFF" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;:not(.active):not(.disabled)" attribute="background-color"/>
+				<Description>Sets the background color</Description>
+			</StyleProperty>
+			<StyleProperty name="disabledBackColor" category="Appearance" type="Color" default="#F1F1F1" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.disabled" attribute="background-color"/>
+				<Description>Sets the background color of the widget when disabled</Description>
+			</StyleProperty>
+			<StyleProperty name="backGroundGradient" category="Appearance" type="Gradient" default="" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;:not(.disabled)" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
+				<Description>Background as a gradient</Description>
+			</StyleProperty>
+			<StyleProperty name="disabledBackGroundGradient" category="Appearance" type="Gradient" default="" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.disabled" attribute="@include mixins.backGroundGradient(&apos;$value&apos;)"/>
+				<Description>Background as a gradient</Description>
+			</StyleProperty>
+			<StyleProperty name="borderColor" category="Appearance" type="ColorCollection" default="#555555" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;:not(.active):not(.disabled)" attribute="border-color"/>
+				<Description>Sets the border color</Description>
+			</StyleProperty>
+			<StyleProperty name="disabledBorderColor" category="Appearance" type="ColorCollection" default="#C8C8C8" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.disabled" attribute="border-color"/>
+				<Description>Sets the border color of the widget when disabled. For further information, please see its type</Description>
+			</StyleProperty>
+			<StyleProperty name="activeBorderColor" category="Appearance" type="ColorCollection" default="#FF8800" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.active:not(.disabled)" attribute="border-color"/>
+				<Description>Sets the border color when the widget is active</Description>
+			</StyleProperty>
+			<StyleProperty name="activeBackColor" category="Appearance" type="Color" default="#F1F1F1" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.active:not(.disabled)" attribute="background-color"/>
+				<Description>back color when widget is active</Description>
+			</StyleProperty>
+			<StyleProperty name="activeTextColor" category="Appearance" type="Color" default="#000000" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.active:not(.disabled) span" attribute="color"/>
+				<Description>Sets the color of the text when the widget is active</Description>
+			</StyleProperty>
+			<StyleProperty name="borderStyle" category="Appearance" type="BorderStyle" default="solid" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="" attribute="border-style"/>
+				<StyleElement selector="&amp;.active" attribute="border-style"/>
+				<Description>Style of the Border of the widget</Description>
+			</StyleProperty>
+			<StyleProperty name="textColor" category="Appearance" type="Color" default="#000000" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;:not(.active):not(.disabled) span" attribute="color"/>
+				<Description>Sets the color of the text</Description>
+			</StyleProperty>
+			<StyleProperty name="disabledTextColor" category="Appearance" type="Color" default="#C8C8C8" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="&amp;.disabled span" attribute="color"/>
+				<Description>Sets the color of the displayed text when the widget is disabled</Description>
+			</StyleProperty>
+			<StyleProperty name="textAlign" category="Appearance" type="brease.enum.TextAlign" default="right" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.text-alignment($value)"/>
+				<Description>Alignment of the text</Description>
+			</StyleProperty>
+			<StyleProperty name="opacity" category="Appearance" type="Opacity" default="1" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="opacity"/>
+				<Description>Opacity of the widget</Description>
+			</StyleProperty>
+			<StyleProperty name="fontName" category="Font" type="FontName" default="Arial" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="font-family"/>
+				<Description>Fontname of the text</Description>
+			</StyleProperty>
+			<StyleProperty name="fontSize" category="Font" type="PixelVal" default="16px" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="font-size"/>
+				<Description>Fontsize of the text</Description>
+			</StyleProperty>
+			<StyleProperty name="rotation" category="Appearance" type="Rotation" default="0deg" owner="widgets.brXtended.TimeInput">
+				<StyleElement selector="" attribute="@include mixins.rotate($value)"/>
+				<Description>Rotation of widget.</Description>
+			</StyleProperty>
+			<StyleProperty name="bold" category="Font" type="Boolean" default="true" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.font-weight-bold($value)"/>
+				<Description>If **true** font style is bold</Description>
+			</StyleProperty>
+			<StyleProperty name="italic" category="Font" type="Boolean" default="false" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.font-style-italic($value)"/>
+				<Description>If **true** font style is italic</Description>
+			</StyleProperty>
+			<StyleProperty name="padding" category="Layout" type="Padding" default="0 15px 0 15px" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="padding"/>
+				<Description>Padding of the Widget</Description>
+			</StyleProperty>
+			<StyleProperty name="margin" category="Layout" type="Margin" default="0px" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="margin"/>
+				<Description>Margin of the Widget</Description>
+			</StyleProperty>
+			<StyleProperty name="shadow" category="Appearance" type="Shadow" default="none" owner="widgets.brXtended.TimeInput">
+				<StyleElement attribute="@include mixins.box-shadow($value)"/>
+				<Description>Shadow of the Widget</Description>
+			</StyleProperty>
+		</StyleProperties>
+		<PropertyGroups>
+			<PropertyGroup name="Size" type="String" category="Layout">
+				<Description>outer height and width of widget</Description>
+			</PropertyGroup>
+			<PropertyGroup name="Position" type="String" category="Layout">
+				<Description>top and left of widget</Description>
+			</PropertyGroup>
+		</PropertyGroups>
+	</Widget>
+</WidgetLibrary>

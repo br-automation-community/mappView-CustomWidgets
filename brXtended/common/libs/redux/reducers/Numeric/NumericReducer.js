@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Numeric/NumericActions'
+    './NumericActions'
 ], function (NumericActions) {
 
     'use strict';

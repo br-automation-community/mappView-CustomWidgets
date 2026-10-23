@@ -1,5 +1,5 @@
 define([
-    'widgets/brXtended/common/libs/wfUtils/UtilsImage'
+    './wfUtils/UtilsImage'
 ], function (UtilsImage) {
 
     'use strict';

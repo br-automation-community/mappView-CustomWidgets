@@ -1,8 +1,8 @@
 'use strict';
 define([
-    'widgets/brXtended/common/libs/redux/view/ImageView/ImageView',
-    'widgets/brXtended/common/libs/redux/view/TextView/TextView',
-    'widgets/brXtended/common/libs/BoxLayout',
+    '../ImageView/ImageView',
+    '../TextView/TextView',
+    '../../../BoxLayout',
     'brease'
 ], function (ImageView, TextView, BoxLayout, { settings: breaseSettings, events: { BreaseEvent }, enum: { Enum } }) {
 

@@ -1,7 +1,7 @@
 'use strict';
 define([
     'brease',
-    'widgets/brXtended/common/libs/ChartUtils',
+    './ChartUtils',
     'libs/d3/d3'
 ], function ({ controller: { uiController }, core: { Class: SuperClass, Utils }, events: { BreaseEvent }, helper: { dateFormatter } }, ChartUtils, d3) {
 

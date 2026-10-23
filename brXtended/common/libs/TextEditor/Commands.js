@@ -1,4 +1,4 @@
-define(['widgets/brXtended/common/libs/external/ace/ext/searchbox'],
+define(['../external/ace/ext/searchbox'],
     function (SearchBox) {
 
         'use strict';

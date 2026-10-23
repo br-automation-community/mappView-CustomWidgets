@@ -1,0 +1,298 @@
+@use "mixins.scss";
+@use "sass:list";
+@use "sass:string";
+@mixin prop_width {
+	@include mixins.elemWidth(296);
+
+}
+@mixin prop_height {
+	@include mixins.elemHeight(360);
+
+}
+@mixin prop_cornerRadius {
+	@include mixins.border-radius(0px);
+
+	header {
+		@include mixins.border-top-radius(0px);
+	}
+
+	.dateTimePickerBody .dateTimePickerControl {
+		@include mixins.border-bottom-radius(0px-9px);
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter {
+		@include mixins.border-bottom-right-radius(0px-9px);
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset {
+		@include mixins.border-bottom-left-radius(0px-9px);
+	}
+
+}
+@mixin prop_headerGradient {
+	header {
+		@include mixins.backGroundGradient('');
+	}
+
+}
+@mixin prop_borderColor {
+	border-color: #333333;
+
+	header {
+		background-color: #333333;
+	}
+
+	&.arrowLeft .breaseWindowArrow {
+		border-right-color: #333333;
+	}
+
+	&.arrowRight .breaseWindowArrow {
+		border-left-color: #333333;
+	}
+
+	&.arrowTop .breaseWindowArrow {
+		border-bottom-color: #333333;
+	}
+
+	&.arrowBottom .breaseWindowArrow {
+		border-top-color: #333333;
+	}
+
+}
+@mixin prop_textColor {
+	.dateTimePickerBody button {
+		color: #000000;
+	}
+
+	.dateTimePickerBody .dateTimePickerHeadings .actDate {
+		color: #000000;
+	}
+
+}
+@mixin prop_valueTextColor {
+	.dateTimePickerBody .dateTimePickerHeadings .actDate {
+		color: #000000;
+	}
+
+}
+@mixin prop_opacity {
+	opacity: 1;
+
+}
+@mixin prop_fontName {
+	.dateTimePickerBody .dateTimePickerHeadings .actDate {
+		font-family: Arial;
+	}
+
+	.dateTimePickerBody button {
+		font-family: Arial;
+	}
+
+}
+@mixin prop_shadow {
+	@include mixins.box-shadow(none);
+
+}
+@mixin prop_backColor {
+	.dateTimePickerBody .dateTimePickerButtons {
+		background-color: #FFFFFF;
+	}
+
+	.dateTimePickerBody button {
+		background-color: #FFFFFF;
+	}
+
+	.dateTimePickerBody .dateTimePickerHeadings .actDate {
+		background-color: #FFFFFF;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl {
+		background-color: #FFFFFF;
+	}
+
+	.dateTimePickerBody .dateTimePickerButtons button {
+		border-bottom-color: #FFFFFF;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter.active {
+		background-color: #FFFFFF;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset.active {
+		background-color: #FFFFFF;
+	}
+
+}
+@mixin prop_valueBackColor {
+	.dateTimePickerBody .dateTimePickerHeadings .actDate {
+		background-color: #FFFFFF;
+	}
+
+}
+@mixin prop_headerBackColor {
+	header {
+		background-color: #000000;
+	}
+
+}
+@mixin prop_backGroundGradient {
+	@include mixins.backGroundGradient();
+
+	.dateTimePickerBody {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerButtons {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody button {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerControl {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .space {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerHeadings .actDate {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerButtons .dtfragment {
+		@include mixins.borderImageGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerButtons button {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset {
+		@include mixins.backGroundGradient('');
+	}
+
+}
+@mixin prop_valueBackGroundGradient {
+	.dateTimePickerBody .dateTimePickerHeadings .actDate {
+		@include mixins.backGroundGradient('');
+	}
+
+}
+@mixin prop_buttonEnterResetBorderWidth {
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter {
+		border-left-width: 1px;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset {
+		border-right-width: 1px;
+	}
+
+}
+@mixin prop_buttonEnterResetBorderStyle {
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter {
+		border-left-style: solid;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset {
+		border-right-style: solid;
+	}
+
+}
+@mixin prop_buttonEnterResetBorderColor {
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter {
+		border-left-color: #333;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset {
+		border-right-color: #333;
+	}
+
+}
+@mixin prop_mouseDownBackColor {
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter.active {
+		background-color: #FF8800;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset.active {
+		background-color: #FF8800;
+	}
+
+}
+@mixin prop_mouseDownTextColor {
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter.active {
+		color: #FFFFFF;
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset.active {
+		color: #FFFFFF;
+	}
+
+}
+@mixin prop_buttonBackGroundGradient {
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter:not(.active) {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset:not(.active) {
+		@include mixins.backGroundGradient('');
+	}
+
+}
+@mixin prop_buttonMouseDownBackGroundGradient {
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerEnter.active {
+		@include mixins.backGroundGradient('');
+	}
+
+	.dateTimePickerBody .dateTimePickerControl .dateTimePickerReset.active {
+		@include mixins.backGroundGradient('');
+	}
+
+}
+@mixin prop_lineColor {
+	.dateTimePickerBody .dateTimePickerButtons button {
+		border-bottom-color: #d4d4d4;
+	}
+
+}
+@mixin prop_activeLineColor {
+	.dateTimePickerBody .dateTimePickerButtons .marker {
+		background-color: #FF8800;
+	}
+
+}
+
+@mixin base {
+  @include prop_width;
+  @include prop_height;
+  @include prop_cornerRadius;
+  @include prop_headerGradient;
+  @include prop_borderColor;
+  @include prop_textColor;
+  @include prop_valueTextColor;
+  @include prop_opacity;
+  @include prop_fontName;
+  @include prop_shadow;
+  @include prop_backColor;
+  @include prop_valueBackColor;
+  @include prop_headerBackColor;
+  @include prop_backGroundGradient;
+  @include prop_valueBackGroundGradient;
+  @include prop_buttonEnterResetBorderWidth;
+  @include prop_buttonEnterResetBorderStyle;
+  @include prop_buttonEnterResetBorderColor;
+  @include prop_mouseDownBackColor;
+  @include prop_mouseDownTextColor;
+  @include prop_buttonBackGroundGradient;
+  @include prop_buttonMouseDownBackGroundGradient;
+  @include prop_lineColor;
+  @include prop_activeLineColor;
+
+}
+

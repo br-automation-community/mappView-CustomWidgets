@@ -1,6 +1,6 @@
 define([
-    'widgets/brXtended/common/libs/redux/reducers/Text/TextActions',
-    'widgets/brXtended/common/libs/redux/utils/UtilsText'],
+    './TextActions',
+    '../../utils/UtilsText'],
 function (TextActions, UtilsText) {
 
     'use strict';
