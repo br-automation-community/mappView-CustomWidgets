@@ -258,18 +258,16 @@ define([
         var widget = this;
 
         // Make sure file size is within range
-        if (maxFileSize > _minFileSize && maxFileSize < _maxFileSize){
-
+        if (maxFileSize > _minFileSize && maxFileSize <= _maxFileSize){
             return widget.fileManager.load(widget.elem.id, path, flags, encoding, maxFileSize, offset).then(function (fileData) {
-                //console.log("fileData.length:" + fileData.length);
+                if (typeof fileData !== 'string') {
+                    widget._errorHandling(err_unkown);
+                    return;
+                }
 
-                // Make sure file does not exceed maximum size
-                if (fileData.length <= widget.settings.maxFileSize){
-                    // Decode data and create download stream
-                    var data = atob(fileData);
-                    var decode = _decodebase64(data);
-
-                    var blob = new Blob([decode], {type: 'octet/stream'});
+                var data = _decodebase64(atob(fileData));
+                if (data.length <= widget.settings.maxFileSize){
+                    var blob = new Blob([data], {type: 'octet/stream'});
                     const objectURL = window.URL.createObjectURL(blob);
 
                     widget.a.href = objectURL;
@@ -373,7 +371,7 @@ define([
 
     p.dispose = function () {
         var that = this;
-        widgets.brXtended.ButtonTransfer.prototype.dispose.apply(that, arguments);
+        widgets.brease.Button.prototype.dispose.apply(that, arguments);
     };
 
     return WidgetClass;
